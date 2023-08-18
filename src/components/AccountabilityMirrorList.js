@@ -85,7 +85,7 @@ const AccountabilityMirrorList = () => {
         onPress={() => handleDeleteTask(item.id)}
       >
         <Text style={styles.deleteButton}>
-          {<MaterialIcons name="delete" size={24} color="#F6F6F6" />}
+          {<MaterialIcons name="delete" size={24} color="#5B9A8B" />}
         </Text>
       </TouchableOpacity>
     </View>
@@ -101,7 +101,7 @@ const AccountabilityMirrorList = () => {
         />
         <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
           <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#F6F6F6" />}
+            {<FontAwesome name="plus" size={24} color="#C8E4B2" />}
           </Text>
         </TouchableOpacity>
       </View>
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    justifyContent: "flex-end",
   },
   header: {
     fontSize: 24,
@@ -136,7 +137,7 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 4,
     padding: 10,
-    color: "#F6F6F6",
+    color: "#5B9A8B",
   },
   addButton: {
     paddingHorizontal: 20,
@@ -147,7 +148,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   addButtonText: {
-    color: "#F6F6F6",
+    color: "#5B9A8B",
     fontWeight: "bold",
     textShadowColor: "black",
     textShadowOffset: { width: -1, height: 1 },
@@ -155,26 +156,41 @@ const styles = StyleSheet.create({
   },
   flatList: {
     flex: 1,
+    height: "85%", // Adjust the height to leave some space for input
+    alignSelf: "stretch", // Stretch the FlatList to full width
+    flexDirection: "column-reverse",
   },
   taskContainer: {
     flexDirection: "row",
     marginBottom: 10,
+    backgroundColor: "rgba(200, 228, 178, 0.3)", // Lime green background color for the sticky note
+    padding: 10,
+    borderRadius: 8,
+    borderWidth: 2,
+    borderColor: "#5B9A8B", // Border color to mimic sticky note paper
+    alignItems: "center",
+    justifyContent: "space-between",
+    shadowColor: "rgba(209, 255, 140, 0.3)",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   taskTextContainer: {
     flex: 1,
   },
   taskText: {
     fontSize: 18,
-    color: "#D8D9DA",
-    textShadowColor: "black",
-    textShadowOffset: { width: -1, height: 1 },
-    textShadowRadius: 2,
+    color: "#000", // Blue ink color
+    // textShadowColor: "black",
+    // textShadowOffset: { width: -1, height: 1 },
+    // textShadowRadius: 2,
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#D8D9DA",
+    color: "#C8E4B2",
     textShadowColor: "black",
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 2,

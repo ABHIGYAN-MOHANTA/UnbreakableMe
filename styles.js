@@ -5,25 +5,25 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#272829",
+    backgroundColor: "#7EAA92",
   },
   header: {
-    backgroundColor: "#61677A",
+    backgroundColor: "#5B9A8B",
     textAlign: "center",
     fontVariant: "bold",
-    color: "#FFF6E0",
+    color: "#C8E4B2",
     paddingBottom: 20,
   },
   title: {
-    backgroundColor: "#61677A",
+    backgroundColor: "#5B9A8B",
     textAlign: "center",
     fontSize: 40,
     fontWeight: "bold",
-    color: "#D8D9DA",
+    color: "#2D4356",
     paddingTop: 30,
   },
   text: {
-    color: "#D8D9DA",
+    color: "#C8E4B2",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     alignContent: "space-around",
   },
   subheading: {
-    color: "#D8D9DA",
+    color: "#C8E4B2",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",

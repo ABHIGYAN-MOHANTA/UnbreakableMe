@@ -12,14 +12,14 @@ export default function AdditionalScreen() {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: "#272829",
-        tabBarInactiveTintColor: "#61677A",
-        tabBarActiveBackgroundColor: "#61677A",
+        tabBarInactiveTintColor: "#5B9A8B",
+        tabBarActiveBackgroundColor: "#5B9A8B",
         tabBarInactiveBackgroundColor: "#272829",
         headerStyle: {
           backgroundColor: "#272829",
         },
         headerTitleStyle: {
-          color: "#D8D9DA",
+          color: "#C8E4B2",
           fontWeight: "bold",
           fontSize: 25,
         },
@@ -33,7 +33,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="sword"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -47,7 +47,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -61,7 +61,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -75,7 +75,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -89,7 +89,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="robot-excited-outline"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,

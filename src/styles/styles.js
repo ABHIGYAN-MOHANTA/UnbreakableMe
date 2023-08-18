@@ -5,25 +5,25 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#272829",
+    backgroundColor: "#C8E4B2",
   },
   header: {
-    backgroundColor: "#61677A",
+    backgroundColor: "#5B9A8B",
     textAlign: "center",
     fontVariant: "bold",
-    color: "#FFF6E0",
+    color: "#C8E4B26E0",
     paddingBottom: 20,
   },
   title: {
-    backgroundColor: "#61677A",
+    backgroundColor: "#5B9A8B",
     textAlign: "center",
     fontSize: 40,
     fontWeight: "bold",
-    color: "#D8D9DA",
+    color: "#C8E4B2",
     paddingTop: 30,
   },
   text: {
-    color: "#D8D9DA",
+    color: "#C8E4B2",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     alignContent: "space-around",
   },
   subheading: {
-    color: "#D8D9DA",
+    color: "#C8E4B2",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   text: {
-    color: "#D8D9DA",
+    color: "#C8E4B2",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#272829",
   },
   subheading: {
-    color: "#D8D9DA",
+    color: "#C8E4B2",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
     width: "100%",
   },
   button: {
-    backgroundColor: "#61677A",
+    backgroundColor: "#5B9A8B",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -83,11 +83,11 @@ export const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#F6F6F6",
+    color: "#C8E4B2",
     textAlign: "center",
   },
   marginTopText: {
-    color: "#D8D9DA",
+    color: "#C8E4B2",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,

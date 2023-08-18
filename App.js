@@ -23,14 +23,14 @@ export default function App() {
           <Tab.Navigator
             screenOptions={{
               tabBarActiveTintColor: "#272829",
-              tabBarInactiveTintColor: "#61677A",
-              tabBarActiveBackgroundColor: "#61677A",
+              tabBarInactiveTintColor: "#5B9A8B",
+              tabBarActiveBackgroundColor: "#5B9A8B",
               tabBarInactiveBackgroundColor: "#272829",
               headerStyle: {
                 backgroundColor: "#272829",
               },
               headerTitleStFocusedyle: {
-                color: "#D8D9DA",
+                color: "#C8E4B2",
                 fontWeight: "bold",
                 fontSize: 25,
               },
@@ -44,7 +44,7 @@ export default function App() {
                   <FontAwesome5
                     name="dharmachakra"
                     size={24}
-                    color={focused ? "#272829" : "#61677A"}
+                    color={focused ? "#272829" : "#5B9A8B"}
                   />
                 ),
                 headerShown: false,
@@ -58,7 +58,7 @@ export default function App() {
                   <FontAwesome
                     name="briefcase"
                     size={24}
-                    color={focused ? "#272829" : "#61677A"}
+                    color={focused ? "#272829" : "#5B9A8B"}
                   />
                 ),
                 headerShown: false,
@@ -72,7 +72,7 @@ export default function App() {
                   <MaterialCommunityIcons
                     name="robot-excited-outline"
                     size={24}
-                    color={focused ? "#272829" : "#61677A"}
+                    color={focused ? "#272829" : "#5B9A8B"}
                   />
                 ),
                 headerShown: false,

@@ -21,14 +21,14 @@ export default function MainScreen() {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: "#272829",
-        tabBarInactiveTintColor: "#61677A",
-        tabBarActiveBackgroundColor: "#61677A",
+        tabBarInactiveTintColor: "#5B9A8B",
+        tabBarActiveBackgroundColor: "#5B9A8B",
         tabBarInactiveBackgroundColor: "#272829",
         headerStyle: {
           backgroundColor: "#272829",
         },
         headerTitleStyle: {
-          color: "#D8D9DA",
+          color: "#C8E4B2",
           fontWeight: "bold",
           fontSize: 25,
         },
@@ -45,7 +45,7 @@ export default function MainScreen() {
             <MaterialIcons
               name="inventory"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -59,7 +59,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="mirror-variant"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -73,7 +73,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="grav"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -87,7 +87,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="ghost"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -101,7 +101,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="brain"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -115,7 +115,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="cookie-bite"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -129,7 +129,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="brain"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -143,7 +143,7 @@ export default function MainScreen() {
             <MaterialIcons
               name="schedule"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -157,7 +157,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="wolf-pack-battalion"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,
@@ -171,7 +171,7 @@ export default function MainScreen() {
             <Ionicons
               name="ios-trophy-sharp"
               size={24}
-              color={focused ? "#272829" : "#61677A"}
+              color={focused ? "#272829" : "#5B9A8B"}
             />
           ),
           headerShown: false,

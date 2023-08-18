@@ -27,7 +27,7 @@ const Item = (props) => {
             <MaterialCommunityIcons
               name="star-four-points"
               size={24}
-              color="#F6F6F6"
+              color="#C8E4B2"
             />
           }{" "}
           {text}

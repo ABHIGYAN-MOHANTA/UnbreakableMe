@@ -68,7 +68,6 @@ const ArmouredMind = () => {
             borderWidth: 1,
             borderColor: "#ccc",
             borderRadius: 4,
-            padding: 10,
             marginBottom: 10,
             color: "#F0E9D2",
           }}

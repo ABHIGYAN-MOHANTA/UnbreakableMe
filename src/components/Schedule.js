@@ -18,8 +18,8 @@ const Schedule = () => {
         Week 3: Your schedule should be optimized!
       </Text>
       <Text style={styles.text}>
-        End Goal: Stop wasting time. Maximize your effort in what you do every
-        day without sacrificing sleep.
+        The ultimate objective is to stop wasting time. Maximize your effort in
+        what you do every day without sacrificing sleep.
       </Text>
     </View>
   );

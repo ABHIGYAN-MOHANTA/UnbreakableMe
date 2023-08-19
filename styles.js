@@ -42,4 +42,23 @@ export const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
   },
+  modalBackground: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
+  },
+  modalContent: {
+    backgroundColor: "#F0E9D2",
+    padding: 20,
+    borderRadius: 10,
+    width: "80%", // Adjust the width as needed
+    alignItems: "center",
+  },
+  modalText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 10,
+  },
 });

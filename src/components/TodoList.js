@@ -80,7 +80,7 @@ const TodoList = () => {
         onPress={() => handleDeleteTask(item.id)}
       >
         <Text style={styles.deleteButton}>
-          {<MaterialIcons name="delete" size={24} color="#C8E4B2" />}
+          {<MaterialIcons name="delete" size={24} color="#272829" />}
         </Text>
       </TouchableOpacity>
     </View>
@@ -96,7 +96,7 @@ const TodoList = () => {
         />
         <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
           <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#C8E4B2" />}
+            {<FontAwesome name="plus" size={24} color="#272829" />}
           </Text>
         </TouchableOpacity>
       </View>
@@ -132,10 +132,10 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 4,
     padding: 10,
-    color: "#C8E4B2",
+    color: "#F0E9D2",
   },
   addButton: {
-    backgroundColor: "#5B9A8B",
+    backgroundColor: "#F0E9D2",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -143,8 +143,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  addButtonText: {
-    color: "#C8E4B2",
+  addbuttonText: {
+    color: "#272829",
     fontWeight: "bold",
   },
   flatList: {
@@ -159,13 +159,13 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#C8E4B2",
+    color: "#F0E9D2",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#C8E4B2",
+    color: "#F0E9D2",
   },
 });
 

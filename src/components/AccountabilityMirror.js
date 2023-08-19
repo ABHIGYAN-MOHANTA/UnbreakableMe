@@ -5,7 +5,6 @@ import { styles } from "../styles/styles.js";
 const AccountabilityMirror = () => {
   return (
     <View style={styles.subsection}>
-      <Text style={styles.subheading}>Accountability Mirror</Text>
       <Text style={styles.marginTopText}>
         Put Post-It notes all over the mirror you use in the morning of your
         goals. That way, they’re IN YOUR FACE every morning and

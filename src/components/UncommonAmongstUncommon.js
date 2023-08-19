@@ -5,7 +5,6 @@ import { styles } from "../styles/styles.js";
 const UncommonAmongstUncommon = () => {
   return (
     <View style={styles.subsection}>
-      <Text style={styles.subheading}>Uncommon Amongst Uncommon</Text>
       <Text style={styles.marginTopText}>
         Greatness is not something that if you meet it once it stays with you
         forever. That shit evaporates like a flash of oil in a hot pan.

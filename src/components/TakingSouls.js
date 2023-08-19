@@ -80,14 +80,13 @@ const TakingSouls = () => {
         onPress={() => handleDeleteTask(item.id)}
       >
         <Text style={styles.deleteButton}>
-          {<MaterialIcons name="delete" size={24} color="#C8E4B2" />}
+          {<MaterialIcons name="delete" size={24} color="#272829" />}
         </Text>
       </TouchableOpacity>
     </View>
   );
   return (
     <View style={styles.container}>
-      <Text style={styles.subheading}>Taking Souls</Text>
       <Text style={styles.text}>
         When someone doesn't believe in you, work so hard that you surpass their
         every expectation and they look at you in sheer awe. They don’t have to
@@ -104,7 +103,7 @@ const TakingSouls = () => {
         />
         <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
           <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#C8E4B2" />}
+            {<FontAwesome name="plus" size={24} color="#272829" />}
           </Text>
         </TouchableOpacity>
       </View>
@@ -140,10 +139,10 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 4,
     padding: 10,
-    color: "#C8E4B2",
+    color: "#F0E9D2",
   },
   addButton: {
-    backgroundColor: "#5B9A8B",
+    backgroundColor: "#F0E9D2",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -151,8 +150,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  addButtonText: {
-    color: "#C8E4B2",
+  addbuttonText: {
+    color: "#272829",
     fontWeight: "bold",
   },
   flatList: {
@@ -167,21 +166,21 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#C8E4B2",
+    color: "#F0E9D2",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#C8E4B2",
+    color: "#F0E9D2",
   },
   text: {
-    color: "#C8E4B2",
+    color: "#F0E9D2",
     marginBottom: 10,
     textAlign: "center",
   },
   subheading: {
-    color: "#C8E4B2",
+    color: "#F0E9D2",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",

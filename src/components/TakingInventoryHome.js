@@ -16,9 +16,9 @@ const TakingInventoryHome = () => {
         initialRouteName="Taking Inventory"
         screenOptions={{
           headerStyle: {
-            backgroundColor: "#5B9A8B",
+            backgroundColor: "#F0E9D2",
           },
-          headerTintColor: "#C8E4B2",
+          headerTintColor: "#272829",
           headerTitleStyle: {
             fontWeight: "bold",
           },

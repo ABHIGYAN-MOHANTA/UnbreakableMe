@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
+  Modal,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -14,6 +15,9 @@ import { FontAwesome } from "@expo/vector-icons";
 const CookieJar = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
+  const [randomItem, setRandomItem] = useState(null);
+  const [showFullList, setShowFullList] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   // Load data from AsyncStorage on component mount
   useEffect(() => {
@@ -64,6 +68,20 @@ const CookieJar = () => {
     saveData(updatedTasks); // Save data to AsyncStorage
   };
 
+  const handleRandomItem = () => {
+    const randomIndex = Math.floor(Math.random() * tasks.length);
+    setRandomItem(tasks[randomIndex]);
+    setShowPopup(true);
+
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 2000);
+  };
+
+  const toggleFullList = () => {
+    setShowFullList(!showFullList);
+  };
+
   const renderItem = ({ item }) => (
     <View style={styles.taskContainer}>
       <View style={styles.taskTextContainer}>
@@ -80,14 +98,13 @@ const CookieJar = () => {
         onPress={() => handleDeleteTask(item.id)}
       >
         <Text style={styles.deleteButton}>
-          {<MaterialIcons name="delete" size={24} color="#C8E4B2" />}
+          {<MaterialIcons name="delete" size={24} color="#272829" />}
         </Text>
       </TouchableOpacity>
     </View>
   );
   return (
     <View style={styles.container}>
-      <Text style={styles.subheading}>Cookie Jar</Text>
       <Text style={styles.text}>
         Whenever you faced failure or rejection, but then you turned things
         around and triumphed, these memories are your cookies in your mental
@@ -104,16 +121,49 @@ const CookieJar = () => {
         />
         <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
           <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#C8E4B2" />}
+            {<FontAwesome name="plus" size={24} color="#272829" />}
           </Text>
         </TouchableOpacity>
       </View>
-      <FlatList
-        data={tasks}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
-        style={styles.flatList}
-      />
+      {/* Button to display a random item */}
+      <TouchableOpacity style={styles.addButton} onPress={handleRandomItem}>
+        <Text style={styles.addButtonText}>Grab a Cookie</Text>
+      </TouchableOpacity>
+
+      {/* Display the randomly selected item */}
+      {randomItem && (
+        <Modal
+          animationType="fade"
+          transparent={true}
+          visible={showPopup}
+          onRequestClose={() => {
+            setShowPopup(false);
+          }}
+        >
+          <View style={styles.popupContainer}>
+            <Text style={styles.popupText}>
+              {randomItem ? randomItem.text : ""}
+            </Text>
+          </View>
+        </Modal>
+      )}
+      <View style={styles.gap}></View>
+      {/* Button to display the full flat list */}
+      <TouchableOpacity style={styles.addButton} onPress={toggleFullList}>
+        <Text style={styles.addButtonText}>
+          {showFullList ? "Hide Cookies" : "Show all Cookies"}
+        </Text>
+      </TouchableOpacity>
+      <View style={styles.gap}></View>
+      {/* Display the flat list */}
+      {showFullList && (
+        <FlatList
+          data={tasks}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+          style={styles.flatList}
+        />
+      )}
     </View>
   );
 };
@@ -142,10 +192,10 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 4,
     padding: 10,
-    color: "#C8E4B2",
+    color: "#F0E9D2",
   },
   addButton: {
-    backgroundColor: "#5B9A8B",
+    backgroundColor: "#F0E9D2",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -153,8 +203,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  addButtonText: {
-    color: "#C8E4B2",
+  addbuttonText: {
+    color: "#272829",
     fontWeight: "bold",
   },
   flatList: {
@@ -169,26 +219,42 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#C8E4B2",
+    color: "#F0E9D2",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#C8E4B2",
+    color: "#F0E9D2",
   },
   text: {
-    color: "#C8E4B2",
+    color: "#F0E9D2",
     marginBottom: 10,
     textAlign: "center",
   },
   subheading: {
-    color: "#C8E4B2",
+    color: "#F0E9D2",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
     paddingTop: 20,
     marginTop: -25,
     marginBottom: 10,
+  },
+  gap: {
+    height: 10,
+  },
+  popupContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
+  },
+  popupText: {
+    color: "#F0E9D2",
+    fontSize: 18,
+    padding: 20,
+    backgroundColor: "#333",
+    borderRadius: 10,
   },
 });

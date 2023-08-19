@@ -85,7 +85,7 @@ const AccountabilityMirrorList = () => {
         onPress={() => handleDeleteTask(item.id)}
       >
         <Text style={styles.deleteButton}>
-          {<MaterialIcons name="delete" size={24} color="#5B9A8B" />}
+          {<MaterialIcons name="delete" size={24} color="#272829" />}
         </Text>
       </TouchableOpacity>
     </View>
@@ -101,7 +101,7 @@ const AccountabilityMirrorList = () => {
         />
         <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
           <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#C8E4B2" />}
+            {<FontAwesome name="plus" size={24} color="#272829" />}
           </Text>
         </TouchableOpacity>
       </View>
@@ -134,10 +134,11 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#F0E9D2",
     borderRadius: 4,
     padding: 10,
-    color: "#5B9A8B",
+    color: "#272829",
+    backgroundColor: "rgba(240, 233, 210, 0.8)",
   },
   addButton: {
     paddingHorizontal: 20,
@@ -147,8 +148,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  addButtonText: {
-    color: "#5B9A8B",
+  addbuttonText: {
+    color: "#272829",
     fontWeight: "bold",
     textShadowColor: "black",
     textShadowOffset: { width: -1, height: 1 },
@@ -163,14 +164,14 @@ const styles = StyleSheet.create({
   taskContainer: {
     flexDirection: "row",
     marginBottom: 10,
-    backgroundColor: "rgba(200, 228, 178, 0.3)", // Lime green background color for the sticky note
+    backgroundColor: "rgba(240, 233, 210, 0.8)", // Slightly translucent version of the color
     padding: 10,
-    borderRadius: 8,
+    borderRadius: 10,
     borderWidth: 2,
-    borderColor: "#5B9A8B", // Border color to mimic sticky note paper
+    borderColor: "#F0E9D2", // Border color to mimic sticky note paper
     alignItems: "center",
     justifyContent: "space-between",
-    shadowColor: "rgba(209, 255, 140, 0.3)",
+    shadowColor: "#000", // Shadow color
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
@@ -181,7 +182,7 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#000", // Blue ink color
+    color: "black", // Blue ink color
     // textShadowColor: "black",
     // textShadowOffset: { width: -1, height: 1 },
     // textShadowRadius: 2,
@@ -190,7 +191,7 @@ const styles = StyleSheet.create({
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#C8E4B2",
+    color: "#F0E9D2",
     textShadowColor: "black",
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 2,

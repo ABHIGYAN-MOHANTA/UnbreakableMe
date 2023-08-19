@@ -5,7 +5,6 @@ import { styles } from "../styles/styles.js";
 const TakingInventory = () => {
   return (
     <View style={styles.subsection}>
-      <Text style={styles.subheading}>Taking Inventory</Text>
       <Text style={styles.marginTopText}>
         Task: Write out a list of what is challenging you today. What problems
         and limitations do you encounter? What excuses are you making? Don’t

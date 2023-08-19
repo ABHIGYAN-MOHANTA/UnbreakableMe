@@ -5,7 +5,6 @@ import { styles } from "../styles/styles.js";
 const Schedule = () => {
   return (
     <View style={styles.subsection}>
-      <Text style={styles.subheading}>Optimize your Schedule</Text>
       <Text style={styles.marginTopText}>
         Week 1: Take notes on your daily routines and habits. How often are you
         on your phone or watching TV? How long do you take to eat and commute to

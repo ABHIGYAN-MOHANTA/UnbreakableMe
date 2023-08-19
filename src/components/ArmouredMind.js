@@ -5,7 +5,6 @@ import { styles } from "../styles/styles.js";
 const ArmouredMind = () => {
   return (
     <View style={styles.subsection}>
-      <Text style={styles.subheading}>Armoured Mind</Text>
       <Text style={styles.marginTopText}>
         Task: Visualize you success. It isn't simply day dreaming some trophy
         ceremony! Visualize all the challenges you have to face and how to

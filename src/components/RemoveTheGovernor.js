@@ -5,7 +5,6 @@ import { styles } from "../styles/styles.js";
 const RemoveTheGovernor = () => {
   return (
     <View style={styles.subsection}>
-      <Text style={styles.subheading}>The 40% Rule</Text>
       <Text style={styles.marginTopText}>
         Remember that when you’re done…you’re not. You’ve got about 40% more
         left in the tank if you can just tap into that reserve. From what I’ve

@@ -21,7 +21,7 @@ const PBDAbout = () => {
         <TouchableOpacity
           onPress={() => handleLinkPress("https://twitter.com/patrickbetdavid")}
         >
-          <FontAwesome name="twitter" size={30} color="#C8E4B2" />
+          <FontAwesome name="twitter" size={30} color="#F0E9D2" />
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -29,12 +29,12 @@ const PBDAbout = () => {
             handleLinkPress("https://www.youtube.com/@VALUETAINMENT")
           }
         >
-          <FontAwesome name="youtube" size={30} color="#C8E4B2" />
+          <FontAwesome name="youtube" size={30} color="#F0E9D2" />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleLinkPress("https://www.patrickbetdavid.com/")}
         >
-          <FontAwesome name="globe" size={30} color="#C8E4B2" />
+          <FontAwesome name="globe" size={30} color="#F0E9D2" />
         </TouchableOpacity>
       </View>
     </View>

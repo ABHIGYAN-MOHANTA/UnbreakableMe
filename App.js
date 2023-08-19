@@ -18,9 +18,9 @@ export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
   const [quoteIndex, setQuoteIndex] = useState(0);
 
-  // Define PanResponder to detect slide down gesture
   const panResponder = PanResponder.create({
-    onStartShouldSetPanResponder: () => true,
+    onStartShouldSetPanResponder: (_, gestureState) =>
+      gestureState.numberActiveTouches === 2,
     onPanResponderMove: (_, gestureState) => {
       if (gestureState.dy > 50) {
         setModalVisible(true);

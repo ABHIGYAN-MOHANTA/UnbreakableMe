@@ -94,4 +94,15 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 20,
   },
+  checkboxContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+  },
+
+  checkboxLabel: {
+    marginLeft: 10,
+    color: "#F0E9D2",
+    fontSize: 16,
+  },
 });

@@ -1,10 +1,11 @@
 import AToZGuideToComeback from "../components/AToZGuideToComeback";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 import PBDHome from "../components/PBDHome";
 import PBDSecondHome from "../components/PBDSecondHome";
 import PBDThirdHome from "../components/PBDThirdHome";
-import PBDAbout from "../components/PBDAbout";
+import Extras from "../components/Extras";
 const Tab = createBottomTabNavigator();
 
 export default function AdditionalScreen() {
@@ -82,12 +83,12 @@ export default function AdditionalScreen() {
         }}
       />
       <Tab.Screen
-        name={"PBD About"}
-        component={PBDAbout}
+        name={"Extras"}
+        component={Extras}
         options={{
           tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name="robot-excited-outline"
+            <Entypo
+              name="folder"
               size={24}
               color={focused ? "#272829" : "#F0E9D2"}
             />

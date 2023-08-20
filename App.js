@@ -22,7 +22,7 @@ export default function App() {
     onStartShouldSetPanResponder: (_, gestureState) =>
       gestureState.numberActiveTouches === 2,
     onPanResponderMove: (_, gestureState) => {
-      if (gestureState.dy > 50) {
+      if (gestureState.dy > 50 && modalVisible === false) {
         setModalVisible(true);
         // Move to the next quote
         setQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);

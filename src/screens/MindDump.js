@@ -6,11 +6,11 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
-  ScrollView,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import BreathingBar from "../components/BreathingBar";
 
 const MindDump = () => {
   const [tasks, setTasks] = useState([]);
@@ -113,6 +113,7 @@ const MindDump = () => {
         keyExtractor={(item) => item.id.toString()}
         style={styles.flatList}
       />
+      <BreathingBar />
     </View>
   );
 };

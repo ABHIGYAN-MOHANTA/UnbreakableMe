@@ -1,7 +1,7 @@
 import { Camera, CameraType } from "expo-camera";
 import { useState } from "react";
-import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import AccountabilityMirrorList from "./AccountabilityMirrorList";
+import { Button, StyleSheet, Text, View } from "react-native";
+import NotesApp from "./NotesApp";
 
 export default function Mirror() {
   const [type, setType] = useState(CameraType.front);
@@ -27,7 +27,7 @@ export default function Mirror() {
   return (
     <View style={styles.container}>
       <Camera style={styles.camera} type={type}>
-        <AccountabilityMirrorList />
+        <NotesApp />
       </Camera>
     </View>
   );

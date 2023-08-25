@@ -4,12 +4,10 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "../styles/styles.js";
 import Mirror from "./Mirror.js";
-import { useNavigation } from "@react-navigation/native";
 
 const Stack = createStackNavigator();
 
 const AccountabilityMirrorHome = () => {
-  const navigation = useNavigation();
   return (
     <View style={styles.subsection}>
       <Stack.Navigator
@@ -36,12 +34,6 @@ const AccountabilityMirrorHome = () => {
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate("Mirror")}
-      >
-        <Text style={styles.buttonText}>Proceed to On the Go Mirror</Text>
-      </TouchableOpacity>
     </View>
   );
 };

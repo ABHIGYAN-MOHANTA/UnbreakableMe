@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import MainScreen from "./src/screens/MainScreen";
 import AdditionalScreen from "./src/screens/AdditionalScreen";
-import About from "./src/screens/About";
+import MindDump from "./src/screens/MindDump";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import React, { useState } from "react";
@@ -15,8 +15,9 @@ import quotes from "./src/components/MotivationalQuotes";
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  const n = Math.floor(Math.random() * 51);
   const [modalVisible, setModalVisible] = useState(false);
-  const [quoteIndex, setQuoteIndex] = useState(0);
+  const [quoteIndex, setQuoteIndex] = useState(n);
 
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: (_, gestureState) =>
@@ -86,8 +87,8 @@ export default function App() {
                 }}
               />
               <Tab.Screen
-                name="About"
-                component={About}
+                name="MindDump"
+                component={MindDump}
                 options={{
                   tabBarIcon: ({ focused }) => (
                     <MaterialCommunityIcons
@@ -103,7 +104,7 @@ export default function App() {
           </NavigationContainer>
         </View>
         <Modal
-          animationType="slide"
+          animationType="fade"
           transparent={true}
           visible={modalVisible}
           onRequestClose={() => setModalVisible(false)}

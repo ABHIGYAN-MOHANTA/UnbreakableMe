@@ -70,6 +70,7 @@ const ArmouredMind = () => {
             borderRadius: 4,
             marginBottom: 10,
             color: "#F0E9D2",
+            paddingHorizontal: 20,
           }}
           multiline
           placeholder="Your answer here..."
@@ -84,9 +85,9 @@ const ArmouredMind = () => {
             borderWidth: 1,
             borderColor: "#ccc",
             borderRadius: 4,
-            padding: 10,
             marginBottom: 10,
             color: "#F0E9D2",
+            paddingHorizontal: 20,
           }}
           multiline
           placeholder="Your answer here..."
@@ -103,9 +104,9 @@ const ArmouredMind = () => {
             borderWidth: 1,
             borderColor: "#ccc",
             borderRadius: 4,
-            padding: 10,
             marginBottom: 10,
             color: "#F0E9D2",
+            paddingHorizontal: 20,
           }}
           multiline
           placeholder="Your answer here..."
@@ -118,11 +119,11 @@ const ArmouredMind = () => {
           style={{
             height: 100,
             borderWidth: 1,
-            borderColor: "#F0E9D2",
+            borderColor: "#ccc",
             borderRadius: 4,
-            padding: 10,
             marginBottom: 10,
             color: "#F0E9D2",
+            paddingHorizontal: 20,
           }}
           multiline
           placeholder="Your answer here..."

@@ -1,15 +1,13 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import TodoList from "./TodoList.js";
 import TakingInventory from "./TakingInventory.js";
-import React, { useState } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import React from "react";
+import { View } from "react-native";
 import { styles } from "../styles/styles.js";
-import { useNavigation } from "@react-navigation/native";
 
 const Stack = createStackNavigator();
 
 const TakingInventoryHome = () => {
-  const navigation = useNavigation();
   return (
     <View style={styles.subsection}>
       <Stack.Navigator
@@ -30,14 +28,12 @@ const TakingInventoryHome = () => {
           component={TakingInventory}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Proceed to write..." component={TodoList} />
+        <Stack.Screen
+          name="Proceed to write..."
+          component={TodoList}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate("Proceed to write...")}
-      >
-        <Text style={styles.buttonText}>Proceed to write...</Text>
-      </TouchableOpacity>
     </View>
   );
 };

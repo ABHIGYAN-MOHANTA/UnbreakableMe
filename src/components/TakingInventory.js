@@ -1,8 +1,10 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "../styles/styles.js";
+import { useNavigation } from "@react-navigation/native";
 
 const TakingInventory = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.subsection}>
       <Text style={styles.marginTopText}>
@@ -13,6 +15,12 @@ const TakingInventory = () => {
       <Text style={styles.text}>
         Mission: This list of excuses will fuel your future success.
       </Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate("Proceed to write...")}
+      >
+        <Text style={styles.buttonText}>Proceed to write...</Text>
+      </TouchableOpacity>
     </View>
   );
 };

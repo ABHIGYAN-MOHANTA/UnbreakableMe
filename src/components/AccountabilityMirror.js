@@ -1,8 +1,10 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "../styles/styles.js";
+import { useNavigation } from "@react-navigation/native";
 
 const AccountabilityMirror = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.subsection}>
       <Text style={styles.marginTopText}>
@@ -18,6 +20,12 @@ const AccountabilityMirror = () => {
         momentum for it…as the 40 pounds sitting up there on the mirror can be
         pretty damn DE-motivating if it’s too big.
       </Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate("Mirror")}
+      >
+        <Text style={styles.buttonText}>Proceed to On the Go Mirror</Text>
+      </TouchableOpacity>
     </View>
   );
 };

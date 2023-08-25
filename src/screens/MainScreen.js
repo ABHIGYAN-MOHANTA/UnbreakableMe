@@ -13,6 +13,7 @@ import Schedule from "../components/Schedule";
 import UncommonAmongstUncommon from "../components/UncommonAmongstUncommon";
 import { Ionicons } from "@expo/vector-icons";
 import EmpowermentOfFailure from "../components/EmpowermentOfFailure";
+import Intro from "../components/Intro";
 
 const Drawer = createDrawerNavigator();
 
@@ -38,6 +39,20 @@ export default function MainScreen() {
         },
       }}
     >
+      <Drawer.Screen
+        name="Intro"
+        component={Intro}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <MaterialCommunityIcons
+              name="water-well"
+              size={24}
+              color={focused ? "#272829" : "#F0E9D2"}
+            />
+          ),
+          headerTitle: "Intro",
+        }}
+      />
       <Drawer.Screen
         name="Taking Inventory Home"
         component={TakingInventoryHome}

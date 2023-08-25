@@ -89,4 +89,7 @@ export const styles = StyleSheet.create({
     color: "#272829",
     backgroundColor: "#F0E9D2",
   },
+  sidetext: {
+    backgroundColor: "#F0E9D2",
+  },
 });

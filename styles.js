@@ -5,7 +5,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#272829",
   },
   header: {
     backgroundColor: "#F0E9D2",
@@ -60,5 +60,33 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 10,
+  },
+  button: {
+    backgroundColor: "#F0E9D2",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 4,
+    marginHorizontal: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    borderColor: "#272829",
+  },
+  buttonText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#272829",
+    textAlign: "center",
+  },
+  input: {
+    flex: 1,
+    height: 60,
+    borderWidth: 1,
+    borderColor: "#F0E9D2",
+    borderRadius: 4,
+    padding: 10,
+    marginHorizontal: 10,
+    marginBottom: 5,
+    color: "#272829",
+    backgroundColor: "#F0E9D2",
   },
 });

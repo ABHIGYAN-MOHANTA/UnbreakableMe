@@ -1,11 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import React, { useEffect } from "react";
+import {
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+  Linking,
+  SafeAreaView,
+} from "react-native";
 import Checkbox from "expo-checkbox";
 import { styles } from "../styles/styles.js";
 import { Audio } from "expo-av";
+import { FontAwesome } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import QuoteDisplay from "./QuoteDisplay.js";
 
 const Extras = () => {
+  const handleLinkPress = (url) => {
+    Linking.openURL(url);
+  };
   const [sound, setSound] = React.useState();
   const [isPlaying, setIsPlaying] = React.useState(false);
   const [checkboxStates, setCheckboxStates] = React.useState({
@@ -95,7 +107,6 @@ const Extras = () => {
   return (
     <ScrollView
       contentContainerStyle={{
-        flexGrow: 1,
         backgroundColor: "#272829",
       }}
     >
@@ -197,6 +208,47 @@ const Extras = () => {
           <Text style={styles.buttonText}>Reset Checkboxes</Text>
         </TouchableOpacity>
       </View>
+      <Text style={styles.checkboxLabel}>
+        Add Personal Quotes Below, and Swipe up with two fingers from the text
+        box to show a Random Personal Quote
+      </Text>
+      <QuoteDisplay />
+      <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
+        <TouchableOpacity
+          onPress={() => handleLinkPress("https://github.com/ABHIGYAN-MOHANTA")}
+        >
+          <FontAwesome name="github" size={30} color="#F0E9D2" />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => handleLinkPress("https://twitter.com/MohantaAbhigyan")}
+        >
+          <FontAwesome name="twitter" size={30} color="#F0E9D2" />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() =>
+            handleLinkPress("https://www.linkedin.com/in/abhigyan-mohanta/")
+          }
+        >
+          <FontAwesome name="linkedin" size={30} color="#F0E9D2" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            handleLinkPress(
+              "https://www.youtube.com/channel/UCNh2M7dsGe_iaho_JP-khCA"
+            )
+          }
+        >
+          <FontAwesome name="youtube" size={30} color="#F0E9D2" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => handleLinkPress("https://abhigyan.start.page/")}
+        >
+          <FontAwesome name="globe" size={30} color="#F0E9D2" />
+        </TouchableOpacity>
+      </View>
+      <Text></Text>
     </ScrollView>
   );
 };

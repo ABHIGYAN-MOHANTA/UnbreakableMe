@@ -85,7 +85,7 @@ const AccountabilityMirrorList = () => {
         onPress={() => handleDeleteTask(item.id)}
       >
         <Text style={styles.deleteButton}>
-          {<MaterialIcons name="delete" size={24} color="#272829" />}
+          {<MaterialIcons name="delete" size={24} color="#000000" />}
         </Text>
       </TouchableOpacity>
     </View>
@@ -101,7 +101,7 @@ const AccountabilityMirrorList = () => {
         />
         <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
           <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#272829" />}
+            {<FontAwesome name="plus" size={24} color="#000000" />}
           </Text>
         </TouchableOpacity>
       </View>
@@ -134,10 +134,10 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#F0E9D2",
+    borderColor: "#ffffff",
     borderRadius: 4,
     padding: 10,
-    color: "#272829",
+    color: "#000000",
     backgroundColor: "rgba(240, 233, 210, 0.8)",
   },
   addButton: {
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   addbuttonText: {
-    color: "#272829",
+    color: "#000000",
     fontWeight: "bold",
     textShadowColor: "black",
     textShadowOffset: { width: -1, height: 1 },
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: "#F0E9D2", // Border color to mimic sticky note paper
+    borderColor: "#ffffff", // Border color to mimic sticky note paper
     alignItems: "center",
     justifyContent: "space-between",
     shadowColor: "#000", // Shadow color
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     textShadowColor: "black",
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 2,

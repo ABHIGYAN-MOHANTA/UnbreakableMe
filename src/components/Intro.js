@@ -10,8 +10,8 @@ const Intro = () => {
       </Text>
       <Text style={styles.text}>
         Explore the Hamburger Menu on the top left( you can also open it by
-        swipe a finger from the left edge towards right ) and the bottom nav bar
-        too, just explore really, Cheers!
+        swiping a finger from the left edge towards right ) and the bottom nav
+        bar too, just explore really, Cheers!
       </Text>
       <Text style={styles.text}>
         Whenever you want to go back, press the back button! I know this sounds

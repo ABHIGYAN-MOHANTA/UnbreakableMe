@@ -4,7 +4,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const NotesApp = () => {
   const [note, setNote] = useState("");
-  const [selectedColor, setSelectedColor] = useState("#F0E9D2"); // Initial color
+  const [selectedColor, setSelectedColor] = useState("#ffffff"); // Initial color
   const textInputRef = useRef(null); // Ref to the TextInput component
 
   useEffect(() => {

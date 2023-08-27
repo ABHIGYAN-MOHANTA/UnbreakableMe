@@ -6,21 +6,23 @@ import PBDHome from "../components/PBDHome";
 import PBDSecondHome from "../components/PBDSecondHome";
 import PBDThirdHome from "../components/PBDThirdHome";
 import Extras from "../components/Extras";
+import Movies from "../components/Movies";
+import Books from "../components/Books";
 const Tab = createBottomTabNavigator();
 
 export default function AdditionalScreen() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: "#272829",
-        tabBarInactiveTintColor: "#F0E9D2",
-        tabBarActiveBackgroundColor: "#F0E9D2",
-        tabBarInactiveBackgroundColor: "#272829",
+        tabBarActiveTintColor: "#000000",
+        tabBarInactiveTintColor: "#ffffff",
+        tabBarActiveBackgroundColor: "#ffffff",
+        tabBarInactiveBackgroundColor: "#000000",
         headerStyle: {
-          backgroundColor: "#272829",
+          backgroundColor: "#000000",
         },
         headerTitleStyle: {
-          color: "#F0E9D2",
+          color: "#ffffff",
           fontWeight: "bold",
           fontSize: 25,
         },
@@ -34,12 +36,27 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="sword"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
           headerShown: false,
         }}
       />
+      <Tab.Screen
+        name={"Books"}
+        component={Books}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons
+              name="bookshelf"
+              size={24}
+              color={focused ? "#000000" : "#ffffff"}
+            />
+          ),
+          headerShown: false,
+        }}
+      />
+
       <Tab.Screen
         name={"PBD"}
         component={PBDHome}
@@ -48,7 +65,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
           headerShown: false,
@@ -62,7 +79,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
           headerShown: false,
@@ -76,7 +93,22 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
+            />
+          ),
+          headerShown: false,
+        }}
+      />
+
+      <Tab.Screen
+        name={"Movies"}
+        component={Movies}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons
+              name="movie-open"
+              size={24}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
           headerShown: false,
@@ -90,7 +122,7 @@ export default function AdditionalScreen() {
             <Entypo
               name="folder"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
           headerShown: false,

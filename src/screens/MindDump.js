@@ -81,7 +81,7 @@ const MindDump = () => {
         onPress={() => handleDeleteTask(item.id)}
       >
         <Text style={styles.deleteButton}>
-          {<MaterialIcons name="delete" size={24} color="#272829" />}
+          {<MaterialIcons name="delete" size={24} color="#000000" />}
         </Text>
       </TouchableOpacity>
     </View>
@@ -102,7 +102,7 @@ const MindDump = () => {
         />
         <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
           <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#272829" />}
+            {<FontAwesome name="plus" size={24} color="#000000" />}
           </Text>
         </TouchableOpacity>
       </View>
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#272829",
+    backgroundColor: "#000000",
   },
   inputContainer: {
     flexDirection: "row",
@@ -135,10 +135,10 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 4,
     padding: 10,
-    color: "#F0E9D2",
+    color: "#ffffff",
   },
   addButton: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   addbuttonText: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     fontWeight: "bold",
   },
   flatList: {
@@ -162,16 +162,16 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#F0E9D2",
+    color: "#ffffff",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#F0E9D2",
+    color: "#ffffff",
   },
   subheading: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",

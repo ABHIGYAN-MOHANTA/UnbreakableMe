@@ -44,15 +44,15 @@ export default function App() {
           <NavigationContainer>
             <Tab.Navigator
               screenOptions={{
-                tabBarActiveTintColor: "#272829",
-                tabBarInactiveTintColor: "#F0E9D2",
-                tabBarActiveBackgroundColor: "#F0E9D2",
-                tabBarInactiveBackgroundColor: "#272829",
+                tabBarActiveTintColor: "#000000",
+                tabBarInactiveTintColor: "#ffffff",
+                tabBarActiveBackgroundColor: "#ffffff",
+                tabBarInactiveBackgroundColor: "#000000",
                 headerStyle: {
-                  backgroundColor: "#272829",
+                  backgroundColor: "#000000",
                 },
                 headerTitleStFocusedyle: {
-                  color: "#F0E9D2",
+                  color: "#ffffff",
                   fontWeight: "bold",
                   fontSize: 25,
                 },
@@ -66,7 +66,7 @@ export default function App() {
                     <FontAwesome5
                       name="dharmachakra"
                       size={24}
-                      color={focused ? "#272829" : "#F0E9D2"}
+                      color={focused ? "#000000" : "#ffffff"}
                     />
                   ),
                   headerShown: false,
@@ -80,7 +80,7 @@ export default function App() {
                     <FontAwesome
                       name="briefcase"
                       size={24}
-                      color={focused ? "#272829" : "#F0E9D2"}
+                      color={focused ? "#000000" : "#ffffff"}
                     />
                   ),
                   headerShown: false,
@@ -94,7 +94,7 @@ export default function App() {
                     <MaterialCommunityIcons
                       name="robot-excited-outline"
                       size={24}
-                      color={focused ? "#272829" : "#F0E9D2"}
+                      color={focused ? "#000000" : "#ffffff"}
                     />
                   ),
                   headerShown: false,

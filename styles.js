@@ -5,17 +5,17 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#272829",
+    backgroundColor: "#000000",
   },
   header: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     textAlign: "center",
     fontVariant: "bold",
-    color: "#272829",
+    color: "#000000",
     paddingBottom: 20,
   },
   title: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     textAlign: "center",
     fontSize: 40,
     fontWeight: "bold",
@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     paddingTop: 30,
   },
   text: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     alignContent: "space-around",
   },
   subheading: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
   },
   modalContent: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     padding: 20,
     borderRadius: 10,
     width: "80%", // Adjust the width as needed
@@ -62,34 +62,34 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   button: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
     marginHorizontal: 10,
     justifyContent: "center",
     alignItems: "center",
-    borderColor: "#272829",
+    borderColor: "#000000",
   },
   buttonText: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#272829",
+    color: "#000000",
     textAlign: "center",
   },
   input: {
     flex: 1,
     height: 60,
     borderWidth: 1,
-    borderColor: "#F0E9D2",
+    borderColor: "#ffffff",
     borderRadius: 4,
     padding: 10,
     marginHorizontal: 10,
     marginBottom: 5,
-    color: "#272829",
-    backgroundColor: "#F0E9D2",
+    color: "#000000",
+    backgroundColor: "#ffffff",
   },
   sidetext: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
   },
 });

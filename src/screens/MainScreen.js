@@ -21,16 +21,16 @@ export default function MainScreen() {
   return (
     <Drawer.Navigator
       screenOptions={{
-        drawerActiveTintColor: "#272829",
-        drawerInactiveTintColor: "#F0E9D2",
-        drawerActiveBackgroundColor: "#F0E9D2",
-        drawerInactiveBackgroundColor: "#272829",
-        headerTintColor: "#F0E9D2",
+        drawerActiveTintColor: "#000000",
+        drawerInactiveTintColor: "#ffffff",
+        drawerActiveBackgroundColor: "#ffffff",
+        drawerInactiveBackgroundColor: "#000000",
+        headerTintColor: "#ffffff",
         headerStyle: {
-          backgroundColor: "#272829",
+          backgroundColor: "#000000",
         },
         headerTitleStyle: {
-          color: "#F0E9D2",
+          color: "#ffffff",
           fontWeight: "bold",
           fontSize: 18,
         },
@@ -47,7 +47,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="water-well"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
           headerTitle: "Intro",
@@ -61,7 +61,7 @@ export default function MainScreen() {
             <MaterialIcons
               name="inventory"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
           headerTitle: "Taking Inventory",
@@ -75,7 +75,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="mirror-variant"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
           headerTitle: "Accountability Mirror",
@@ -89,7 +89,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="grav"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
         }}
@@ -102,7 +102,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="ghost"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
         }}
@@ -115,7 +115,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="brain"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
         }}
@@ -128,7 +128,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="cookie-bite"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
         }}
@@ -141,7 +141,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="brain"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
         }}
@@ -154,7 +154,7 @@ export default function MainScreen() {
             <MaterialIcons
               name="schedule"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
         }}
@@ -167,7 +167,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="wolf-pack-battalion"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
         }}
@@ -180,7 +180,7 @@ export default function MainScreen() {
             <Ionicons
               name="ios-trophy-sharp"
               size={24}
-              color={focused ? "#272829" : "#F0E9D2"}
+              color={focused ? "#000000" : "#ffffff"}
             />
           ),
         }}

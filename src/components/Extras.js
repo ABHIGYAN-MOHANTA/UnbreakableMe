@@ -107,7 +107,7 @@ const Extras = () => {
   return (
     <ScrollView
       contentContainerStyle={{
-        backgroundColor: "#272829",
+        backgroundColor: "#000000",
       }}
     >
       <View style={styles.subsection}>
@@ -208,22 +208,19 @@ const Extras = () => {
           <Text style={styles.buttonText}>Reset Checkboxes</Text>
         </TouchableOpacity>
       </View>
-      <Text style={styles.checkboxLabel}>
-        Add Personal Quotes Below, and Swipe up with two fingers from the text
-        box to show a Random Personal Quote
-      </Text>
+      <Text style={styles.checkboxLabel}>Save your Personal Quotes Below!</Text>
       <QuoteDisplay />
       <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
         <TouchableOpacity
           onPress={() => handleLinkPress("https://github.com/ABHIGYAN-MOHANTA")}
         >
-          <FontAwesome name="github" size={30} color="#F0E9D2" />
+          <FontAwesome name="github" size={30} color="#ffffff" />
         </TouchableOpacity>
 
         <TouchableOpacity
           onPress={() => handleLinkPress("https://twitter.com/MohantaAbhigyan")}
         >
-          <FontAwesome name="twitter" size={30} color="#F0E9D2" />
+          <FontAwesome name="twitter" size={30} color="#ffffff" />
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -231,7 +228,7 @@ const Extras = () => {
             handleLinkPress("https://www.linkedin.com/in/abhigyan-mohanta/")
           }
         >
-          <FontAwesome name="linkedin" size={30} color="#F0E9D2" />
+          <FontAwesome name="linkedin" size={30} color="#ffffff" />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() =>
@@ -240,12 +237,12 @@ const Extras = () => {
             )
           }
         >
-          <FontAwesome name="youtube" size={30} color="#F0E9D2" />
+          <FontAwesome name="youtube" size={30} color="#ffffff" />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleLinkPress("https://abhigyan.start.page/")}
         >
-          <FontAwesome name="globe" size={30} color="#F0E9D2" />
+          <FontAwesome name="globe" size={30} color="#ffffff" />
         </TouchableOpacity>
       </View>
       <Text></Text>

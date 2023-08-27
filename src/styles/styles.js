@@ -5,25 +5,25 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
   },
   header: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     textAlign: "center",
     fontVariant: "bold",
-    color: "#F0E9D2",
+    color: "#ffffff",
     paddingBottom: 20,
   },
   title: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     textAlign: "center",
     fontSize: 40,
     fontWeight: "bold",
-    color: "#F0E9D2",
+    color: "#ffffff",
     paddingTop: 30,
   },
   text: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     alignContent: "space-around",
   },
   subheading: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   text: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -54,10 +54,10 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignContent: "space-around",
     flex: 1,
-    backgroundColor: "#272829",
+    backgroundColor: "#000000",
   },
   subheading: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
     width: "100%",
   },
   button: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -83,11 +83,11 @@ export const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#272829",
+    color: "#000000",
     textAlign: "center",
   },
   marginTopText: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -102,7 +102,7 @@ export const styles = StyleSheet.create({
 
   checkboxLabel: {
     marginLeft: 10,
-    color: "#F0E9D2",
+    color: "#ffffff",
     fontSize: 16,
   },
 });

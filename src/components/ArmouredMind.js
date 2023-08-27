@@ -49,7 +49,7 @@ const ArmouredMind = () => {
       contentContainerStyle={{
         flexGrow: 1,
         padding: 20,
-        backgroundColor: "#272829",
+        backgroundColor: "#000000",
       }}
     >
       <View style={styles.subsection}>
@@ -69,7 +69,7 @@ const ArmouredMind = () => {
             borderColor: "#ccc",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#F0E9D2",
+            color: "#ffffff",
             paddingHorizontal: 20,
           }}
           multiline
@@ -86,7 +86,7 @@ const ArmouredMind = () => {
             borderColor: "#ccc",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#F0E9D2",
+            color: "#ffffff",
             paddingHorizontal: 20,
           }}
           multiline
@@ -105,7 +105,7 @@ const ArmouredMind = () => {
             borderColor: "#ccc",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#F0E9D2",
+            color: "#ffffff",
             paddingHorizontal: 20,
           }}
           multiline
@@ -122,7 +122,7 @@ const ArmouredMind = () => {
             borderColor: "#ccc",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#F0E9D2",
+            color: "#ffffff",
             paddingHorizontal: 20,
           }}
           multiline

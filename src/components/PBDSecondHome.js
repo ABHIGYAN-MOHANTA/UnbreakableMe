@@ -29,9 +29,9 @@ const PBDSecondHome = () => {
         initialRouteName="PBDEmpty"
         screenOptions={{
           headerStyle: {
-            backgroundColor: "#F0E9D2",
+            backgroundColor: "#ffffff",
           },
-          headerTintColor: "#F0E9D2",
+          headerTintColor: "#ffffff",
           headerTitleStyle: {
             fontWeight: "bold",
           },
@@ -118,7 +118,7 @@ export default PBDSecondHome;
 
 const styleSheet = StyleSheet.create({
   button: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -128,7 +128,7 @@ const styleSheet = StyleSheet.create({
     marginVertical: 1,
   },
   buttonText: {
-    color: "#272829",
+    color: "#000000",
     fontWeight: "bold",
   },
 });

@@ -81,7 +81,7 @@ const EmpowermentOfFailure = () => {
         onPress={() => handleDeleteTask(item.id)}
       >
         <Text style={styless.deleteButton}>
-          {<MaterialIcons name="delete" size={24} color="#272829" />}
+          {<MaterialIcons name="delete" size={24} color="#000000" />}
         </Text>
       </TouchableOpacity>
     </View>
@@ -101,7 +101,7 @@ const EmpowermentOfFailure = () => {
         />
         <TouchableOpacity style={styless.addButton} onPress={handleAddTask}>
           <Text style={styless.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#272829" />}
+            {<FontAwesome name="plus" size={24} color="#000000" />}
           </Text>
         </TouchableOpacity>
       </View>
@@ -121,7 +121,7 @@ const styless = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#272829",
+    backgroundColor: "#000000",
   },
   header: {
     fontSize: 24,
@@ -139,10 +139,10 @@ const styless = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 4,
     padding: 10,
-    color: "#F0E9D2",
+    color: "#ffffff",
   },
   addButton: {
-    backgroundColor: "#F0E9D2",
+    backgroundColor: "#ffffff",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -151,7 +151,7 @@ const styless = StyleSheet.create({
     alignItems: "center",
   },
   addbuttonText: {
-    color: "#272829",
+    color: "#000000",
     fontWeight: "bold",
   },
   flatList: {
@@ -166,16 +166,16 @@ const styless = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#F0E9D2",
+    color: "#ffffff",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#F0E9D2",
+    color: "#ffffff",
   },
   text: {
-    color: "#F0E9D2",
+    color: "#ffffff",
     marginBottom: 10,
     textAlign: "center",
     marginTop: 20,

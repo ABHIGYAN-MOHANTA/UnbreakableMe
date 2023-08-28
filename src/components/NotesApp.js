@@ -55,6 +55,7 @@ const NotesApp = () => {
         placeholder="Write your note here..."
         multiline={true}
         onPressIn={handleNotePressIn}
+        keyboardType="visible-password"
       />
       <View style={styles.colorPalette}>
         <TouchableOpacity

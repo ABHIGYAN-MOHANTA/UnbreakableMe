@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { View, TextInput, StyleSheet, TouchableOpacity } from "react-native";
+import Slider from "@react-native-community/slider";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const NotesApp = () => {
@@ -8,6 +9,7 @@ const NotesApp = () => {
   );
   const [selectedColor, setSelectedColor] = useState("#ffffff"); // Initial color
   const textInputRef = useRef(null); // Ref to the TextInput component
+  const [textSize, setTextSize] = useState(20); // Initial text size
 
   useEffect(() => {
     retrieveNote();
@@ -37,8 +39,9 @@ const NotesApp = () => {
   };
 
   const handleNoteChange = (text) => {
-    setNote(text);
-    saveNote(text);
+    const cleanedText = text.replace(/(\S)\s/, "$1 ");
+    setNote(cleanedText);
+    saveNote(cleanedText);
   };
 
   const handleColorPress = (color) => {
@@ -49,13 +52,21 @@ const NotesApp = () => {
     <View style={styles.container}>
       <TextInput
         ref={textInputRef}
-        style={[styles.textInput, { color: selectedColor }]}
+        style={[styles.textInput, { color: selectedColor, fontSize: textSize }]}
         value={note}
         onChangeText={handleNoteChange}
         placeholder="Write your note here..."
         multiline={true}
         onPressIn={handleNotePressIn}
         keyboardType="visible-password"
+      />
+      <Slider
+        style={styles.slider}
+        minimumValue={16}
+        maximumValue={60}
+        step={2}
+        value={textSize}
+        onValueChange={(value) => setTextSize(value)}
       />
       <View style={styles.colorPalette}>
         <TouchableOpacity
@@ -112,7 +123,6 @@ const styles = StyleSheet.create({
     flex: 1,
     borderWidth: 1,
     padding: 10,
-    fontSize: 16,
     textAlignVertical: "top",
     borderColor: "#ffffff",
   },
@@ -123,6 +133,10 @@ const styles = StyleSheet.create({
   colorButton: {
     width: 40,
     height: 40,
+  },
+  slider: {
+    marginHorizontal: 20,
+    marginTop: 10,
   },
 });
 

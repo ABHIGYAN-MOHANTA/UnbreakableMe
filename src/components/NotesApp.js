@@ -1,7 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, TextInput, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+} from "react-native";
 import Slider from "@react-native-community/slider";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import thumbImg from "../../assets/left-and-right.png";
 
 const NotesApp = () => {
   const [note, setNote] = useState(
@@ -60,14 +67,21 @@ const NotesApp = () => {
         onPressIn={handleNotePressIn}
         keyboardType="visible-password"
       />
-      <Slider
-        style={styles.slider}
-        minimumValue={16}
-        maximumValue={60}
-        step={2}
-        value={textSize}
-        onValueChange={(value) => setTextSize(value)}
-      />
+
+      <View style={{ flexDirection: "row" }}>
+        <Slider
+          style={styles.slider}
+          minimumValue={16}
+          maximumValue={60}
+          step={2}
+          value={textSize}
+          minimumTrackTintColor="#2497f3"
+          maximumTrackTintColor="#ffffff"
+          thumbImage={thumbImg}
+          onValueChange={(value) => setTextSize(value)}
+        />
+      </View>
+
       <View style={styles.colorPalette}>
         <TouchableOpacity
           style={[styles.colorButton, { backgroundColor: "#FF6B6B" }]}
@@ -119,6 +133,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "transparent",
   },
+  textInputContainer: {
+    flex: 1,
+  },
+
   textInput: {
     flex: 1,
     borderWidth: 1,
@@ -137,6 +155,7 @@ const styles = StyleSheet.create({
   slider: {
     marginHorizontal: 20,
     marginTop: 10,
+    flex: 1,
   },
 });
 

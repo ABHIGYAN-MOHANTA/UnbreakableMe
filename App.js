@@ -12,6 +12,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import React, { useState } from "react";
 import quotes from "./src/components/MotivationalQuotes";
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {

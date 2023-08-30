@@ -20,6 +20,7 @@ const NotesApp = () => {
 
   useEffect(() => {
     retrieveNote();
+    retrieveTextSize();
   }, []);
 
   const retrieveNote = async () => {
@@ -32,12 +33,30 @@ const NotesApp = () => {
       console.error("Error retrieving note from AsyncStorage:", error);
     }
   };
+  const retrieveTextSize = async () => {
+    try {
+      const storedTextSize = await AsyncStorage.getItem("@textSize");
+      if (storedTextSize !== null) {
+        setTextSize(parseFloat(storedTextSize));
+      }
+    } catch (error) {
+      console.error("Error retrieving text size from AsyncStorage:", error);
+    }
+  };
 
   const saveNote = async (newNote) => {
     try {
       await AsyncStorage.setItem("@userNote", newNote);
     } catch (error) {
       console.error("Error saving note to AsyncStorage:", error);
+    }
+  };
+
+  const saveTextSize = async (size) => {
+    try {
+      await AsyncStorage.setItem("@textSize", size.toString());
+    } catch (error) {
+      console.error("Error saving text size to AsyncStorage:", error);
     }
   };
 
@@ -55,6 +74,11 @@ const NotesApp = () => {
     setSelectedColor(color);
   };
 
+  const handleTextSizeChange = (value) => {
+    setTextSize(value);
+    saveTextSize(value);
+  };
+
   return (
     <View style={styles.container}>
       <TextInput
@@ -68,7 +92,7 @@ const NotesApp = () => {
         keyboardType="visible-password"
       />
 
-      <View style={{ flexDirection: "row" }}>
+      <View style={{ flexDirection: "row", backgroundColor: "#000000" }}>
         <Slider
           style={styles.slider}
           minimumValue={16}
@@ -78,7 +102,7 @@ const NotesApp = () => {
           minimumTrackTintColor="#2497f3"
           maximumTrackTintColor="#ffffff"
           thumbImage={thumbImg}
-          onValueChange={(value) => setTextSize(value)}
+          onValueChange={handleTextSizeChange}
         />
       </View>
 
@@ -151,10 +175,12 @@ const styles = StyleSheet.create({
   colorButton: {
     width: 40,
     height: 40,
+    borderColor: "#000000",
+    borderWidth: 2,
   },
   slider: {
     marginHorizontal: 20,
-    marginTop: 10,
+    marginVertical: 10,
     flex: 1,
   },
 });

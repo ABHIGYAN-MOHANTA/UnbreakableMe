@@ -1,4 +1,4 @@
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { MaterialIcons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import TakingInventoryHome from "../components/TakingInventoryHome";
@@ -15,176 +15,177 @@ import { Ionicons } from "@expo/vector-icons";
 import EmpowermentOfFailure from "../components/EmpowermentOfFailure";
 import Intro from "../components/Intro";
 
-const Drawer = createDrawerNavigator();
+const Tab = createMaterialTopTabNavigator();
 
 export default function MainScreen() {
   return (
-    <Drawer.Navigator
+    <Tab.Navigator
       screenOptions={{
-        drawerActiveTintColor: "#000000",
-        drawerInactiveTintColor: "#ffffff",
-        drawerActiveBackgroundColor: "#ffffff",
-        drawerInactiveBackgroundColor: "#000000",
-        headerTintColor: "#ffffff",
+        tabActiveTintColor: "#000000",
+        tabInactiveTintColor: "grey",
+        tabActiveBackgroundColor: "grey",
+        tabInactiveBackgroundColor: "#000000",
+        headerTintColor: "grey",
         headerStyle: {
           backgroundColor: "#000000",
         },
         headerTitleStyle: {
-          color: "#ffffff",
+          color: "grey",
           fontWeight: "bold",
           fontSize: 18,
         },
-        drawerStyle: {
+        tabStyle: {
           backgroundColor: "rgba(240, 233, 210, 0.3)",
         },
+        tabBarShowLabel: false,
       }}
     >
-      <Drawer.Screen
-        name="Intro"
+      <Tab.Screen
+        name="I"
         component={Intro}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name="water-well"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
           headerTitle: "Intro",
         }}
       />
-      <Drawer.Screen
-        name="Taking Inventory Home"
+      <Tab.Screen
+        name="II"
         component={TakingInventoryHome}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <MaterialIcons
               name="inventory"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
           headerTitle: "Taking Inventory",
         }}
       />
-      <Drawer.Screen
-        name="Accountability Mirror Home"
+      <Tab.Screen
+        name="III"
         component={AccountabilityMirrorHome}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name="mirror-variant"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
           headerTitle: "Accountability Mirror",
         }}
       />
-      <Drawer.Screen
-        name="DiscomfortZone Exploitation"
+      <Tab.Screen
+        name="IV"
         component={DiscomfortZoneExploitation}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <FontAwesome5
               name="grav"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
         }}
       />
-      <Drawer.Screen
-        name="Taking Souls"
+      <Tab.Screen
+        name="V"
         component={TakingSouls}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <FontAwesome5
               name="ghost"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
         }}
       />
-      <Drawer.Screen
-        name="Armoured Mind"
+      <Tab.Screen
+        name="VI"
         component={ArmouredMind}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name="brain"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
         }}
       />
-      <Drawer.Screen
-        name="Cookie Jar"
+      <Tab.Screen
+        name="VII"
         component={CookieJar}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <FontAwesome5
               name="cookie-bite"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
         }}
       />
-      <Drawer.Screen
-        name="The 40% Rule"
+      <Tab.Screen
+        name="VIII"
         component={RemoveTheGovernor}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <FontAwesome5
               name="brain"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
         }}
       />
-      <Drawer.Screen
-        name="Optimize your Schedule"
+      <Tab.Screen
+        name="IX"
         component={Schedule}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <MaterialIcons
               name="schedule"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
         }}
       />
-      <Drawer.Screen
-        name="Uncommon Amongst Uncommon"
+      <Tab.Screen
+        name="X"
         component={UncommonAmongstUncommon}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <FontAwesome5
               name="wolf-pack-battalion"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
         }}
       />
-      <Drawer.Screen
-        name="Empowerment Of Failure"
+      <Tab.Screen
+        name="XI"
         component={EmpowermentOfFailure}
         options={{
-          drawerIcon: ({ focused }) => (
+          tabBarIcon: ({ focused }) => (
             <Ionicons
               name="ios-trophy-sharp"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "grey"}
             />
           ),
         }}
       />
-    </Drawer.Navigator>
+    </Tab.Navigator>
   );
 }

@@ -105,6 +105,7 @@ const CookieJar = () => {
   );
   return (
     <View style={styles.container}>
+      <Text style={styles.subheading}>Cookie Jar</Text>
       <Text style={styles.text}>
         Whenever you faced failure or rejection, but then you turned things
         around and triumphed, these memories are your cookies in your mental

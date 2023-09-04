@@ -10,6 +10,7 @@ const Stack = createStackNavigator();
 const AccountabilityMirrorHome = () => {
   return (
     <View style={styles.subsection}>
+      <Text style={styles.subheading}>Accountability Mirror</Text>
       <Stack.Navigator
         initialRouteName="AccountabilityMirror"
         screenOptions={{

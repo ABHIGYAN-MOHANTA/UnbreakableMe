@@ -53,6 +53,9 @@ const ArmouredMind = () => {
       }}
     >
       <View style={styles.subsection}>
+        <Text style={[styles.subheading, { marginTop: -20 }]}>
+          Armoured Mind
+        </Text>
         <Text style={styles.marginTopText}>
           Task: Visualize your success. It isn't simply daydreaming about a
           trophy ceremony! Visualize all the challenges you have to face and how

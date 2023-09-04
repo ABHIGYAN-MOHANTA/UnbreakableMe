@@ -87,6 +87,7 @@ const TakingSouls = () => {
   );
   return (
     <View style={styles.container}>
+      <Text style={styles.subheading}>Taking Souls</Text>
       <Text style={styles.text}>
         When someone doesn't believe in you, work so hard that you surpass their
         every expectation and they look at you in sheer awe. They don’t have to

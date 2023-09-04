@@ -88,6 +88,9 @@ const EmpowermentOfFailure = () => {
   );
   return (
     <View style={styless.container}>
+      <Text style={[styles.subheading, { marginTop: -20 }]}>
+        Empowerment of Failure
+      </Text>
       <Text style={styless.text}>
         Task: Write after reports of what happened after you committed to the
         cause

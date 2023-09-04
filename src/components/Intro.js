@@ -5,13 +5,12 @@ import { styles } from "../styles/styles.js";
 const Intro = () => {
   return (
     <View style={styles.subsection}>
+      <Text style={styles.subheading}>Intro</Text>
       <Text style={styles.marginTopText}>
         Try Swiping Down with Two Fingers!
       </Text>
       <Text style={styles.text}>
-        Explore the Hamburger Menu on the top left( you can also open it by
-        swiping a finger from the left edge towards right ) and the bottom nav
-        bar too, just explore really, Cheers!
+        Try Swiping Right! and also check out the bottom navigation bar
       </Text>
       <Text style={styles.text}>
         Whenever you want to go back, press the back button! I know this sounds

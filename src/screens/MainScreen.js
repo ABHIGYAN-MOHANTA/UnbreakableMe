@@ -22,22 +22,25 @@ export default function MainScreen() {
     <Tab.Navigator
       screenOptions={{
         tabActiveTintColor: "#000000",
-        tabInactiveTintColor: "grey",
-        tabActiveBackgroundColor: "grey",
+        tabInactiveTintColor: "#000000",
+        tabActiveBackgroundColor: "#9966CC",
         tabInactiveBackgroundColor: "#000000",
-        headerTintColor: "grey",
+        headerTintColor: "#000000",
         headerStyle: {
           backgroundColor: "#000000",
         },
         headerTitleStyle: {
-          color: "grey",
+          color: "#9966CC",
           fontWeight: "bold",
           fontSize: 18,
         },
         tabStyle: {
-          backgroundColor: "rgba(240, 233, 210, 0.3)",
+          backgroundColor: "#9966CC",
         },
         tabBarShowLabel: false,
+        tabBarContentContainerStyle: {
+          backgroundColor: "grey",
+        },
       }}
     >
       <Tab.Screen
@@ -48,7 +51,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="water-well"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
           headerTitle: "Intro",
@@ -62,7 +65,7 @@ export default function MainScreen() {
             <MaterialIcons
               name="inventory"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
           headerTitle: "Taking Inventory",
@@ -76,7 +79,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="mirror-variant"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
           headerTitle: "Accountability Mirror",
@@ -90,7 +93,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="grav"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
         }}
@@ -103,7 +106,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="ghost"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
         }}
@@ -116,7 +119,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="brain"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
         }}
@@ -129,7 +132,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="cookie-bite"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
         }}
@@ -142,7 +145,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="brain"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
         }}
@@ -155,7 +158,7 @@ export default function MainScreen() {
             <MaterialIcons
               name="schedule"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
         }}
@@ -168,7 +171,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="wolf-pack-battalion"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
         }}
@@ -181,7 +184,7 @@ export default function MainScreen() {
             <Ionicons
               name="ios-trophy-sharp"
               size={24}
-              color={focused ? "#000000" : "grey"}
+              color={focused ? "#4A2672" : "#000000"}
             />
           ),
         }}

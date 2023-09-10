@@ -10,9 +10,8 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-import { styles } from "../styles/styles";
 
-const EmpowermentOfFailure = () => {
+const NotImportantUrgent = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
@@ -24,7 +23,7 @@ const EmpowermentOfFailure = () => {
   // Function to retrieve data from AsyncStorage
   const retrieveData = async () => {
     try {
-      const storedTasks = await AsyncStorage.getItem("@empowermentOfFailure");
+      const storedTasks = await AsyncStorage.getItem("@notImportantUrgent");
       if (storedTasks !== null) {
         setTasks(JSON.parse(storedTasks));
       }
@@ -36,7 +35,7 @@ const EmpowermentOfFailure = () => {
   // Function to save data to AsyncStorage
   const saveData = async (data) => {
     try {
-      await AsyncStorage.setItem("@empowermentOfFailure", JSON.stringify(data));
+      await AsyncStorage.setItem("@notImportantUrgent", JSON.stringify(data));
     } catch (error) {
       console.error("Error saving data to AsyncStorage:", error);
     }
@@ -66,45 +65,38 @@ const EmpowermentOfFailure = () => {
   };
 
   const renderItem = ({ item }) => (
-    <View style={styless.taskContainer}>
-      <View style={styless.taskTextContainer}>
+    <View style={styles.taskContainer}>
+      <View style={styles.taskTextContainer}>
         <TouchableOpacity onPress={() => handleToggleComplete(item.id)}>
           <Text
-            style={[styless.taskText, item.completed && styless.completedTask]}
+            style={[styles.taskText, item.completed && styles.completedTask]}
           >
             {item.text}
           </Text>
         </TouchableOpacity>
       </View>
       <TouchableOpacity
-        style={styless.addButton}
+        style={styles.addButton}
         onPress={() => handleDeleteTask(item.id)}
       >
-        <Text style={styless.deleteButton}>
-          {<MaterialIcons name="delete" size={24} color="#000000" />}
+        <Text style={styles.deleteButton}>
+          {<MaterialIcons name="delete" size={24} color="#FFC107" />}
         </Text>
       </TouchableOpacity>
     </View>
   );
   return (
-    <View style={styless.container}>
-      <Text style={[styles.subheading, { marginTop: -20 }]}>
-        Empowerment of Failure
-      </Text>
-      <Text style={styless.text}>
-        Task: Write after reports of what happened after you committed to the
-        cause
-      </Text>
-      <View style={styless.inputContainer}>
+    <View style={styles.container}>
+      <View style={styles.inputContainer}>
         <TextInput
-          style={styless.input}
+          style={styles.input}
           placeholder="Write here..."
           value={newTask}
           onChangeText={setNewTask}
         />
-        <TouchableOpacity style={styless.addButton} onPress={handleAddTask}>
-          <Text style={styless.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#000000" />}
+        <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
+          <Text style={styles.addButtonText}>
+            {<FontAwesome name="plus" size={24} color="#FFC107" />}
           </Text>
         </TouchableOpacity>
       </View>
@@ -112,19 +104,17 @@ const EmpowermentOfFailure = () => {
         data={tasks}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
-        style={styless.flatList}
+        style={styles.flatList}
       />
     </View>
   );
 };
 
-export default EmpowermentOfFailure;
-
-const styless = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#000000",
+    backgroundColor: "#FFC107",
   },
   header: {
     fontSize: 24,
@@ -139,13 +129,13 @@ const styless = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#9966CC",
+    borderColor: "#212529",
     borderRadius: 4,
     padding: 10,
-    color: "#9966CC",
+    color: "#212529",
   },
   addButton: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#212529",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -154,7 +144,7 @@ const styless = StyleSheet.create({
     alignItems: "center",
   },
   addbuttonText: {
-    color: "#000000",
+    color: "#FFC107",
     fontWeight: "bold",
   },
   flatList: {
@@ -169,18 +159,14 @@ const styless = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#9966CC",
+    color: "#212529",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#9966CC",
-  },
-  text: {
-    color: "#9966CC",
-    marginBottom: 10,
-    textAlign: "center",
-    marginTop: 20,
+    color: "#212529",
   },
 });
+
+export default NotImportantUrgent;

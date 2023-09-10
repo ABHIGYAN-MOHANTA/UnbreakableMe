@@ -129,13 +129,13 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#9966CC",
     borderRadius: 4,
     padding: 10,
-    color: "#ffffff",
+    color: "#9966CC",
   },
   addButton: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#9966CC",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -159,13 +159,13 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#ffffff",
+    color: "#9966CC",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#ffffff",
+    color: "#9966CC",
   },
 });
 

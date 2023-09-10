@@ -8,6 +8,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import MainScreen from "./src/screens/MainScreen";
 import AdditionalScreen from "./src/screens/AdditionalScreen";
 import MindDump from "./src/screens/MindDump";
+import EisenhowerMatrix from "./src/screens/EisenhowerMatrix";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import React, { useState } from "react";
@@ -46,14 +47,14 @@ export default function App() {
             <Tab.Navigator
               screenOptions={{
                 tabBarActiveTintColor: "#000000",
-                tabBarInactiveTintColor: "#ffffff",
-                tabBarActiveBackgroundColor: "#ffffff",
+                tabBarInactiveTintColor: "#9966CC",
+                tabBarActiveBackgroundColor: "#9966CC",
                 tabBarInactiveBackgroundColor: "#000000",
                 headerStyle: {
                   backgroundColor: "#000000",
                 },
                 headerTitleStFocusedyle: {
-                  color: "#ffffff",
+                  color: "#9966CC",
                   fontWeight: "bold",
                   fontSize: 25,
                 },
@@ -67,7 +68,7 @@ export default function App() {
                     <FontAwesome5
                       name="dharmachakra"
                       size={24}
-                      color={focused ? "#000000" : "#ffffff"}
+                      color={focused ? "#000000" : "#9966CC"}
                     />
                   ),
                   headerShown: false,
@@ -81,7 +82,7 @@ export default function App() {
                     <FontAwesome
                       name="briefcase"
                       size={24}
-                      color={focused ? "#000000" : "#ffffff"}
+                      color={focused ? "#000000" : "#9966CC"}
                     />
                   ),
                   headerShown: false,
@@ -95,7 +96,21 @@ export default function App() {
                     <MaterialCommunityIcons
                       name="robot-excited-outline"
                       size={24}
-                      color={focused ? "#000000" : "#ffffff"}
+                      color={focused ? "#000000" : "#9966CC"}
+                    />
+                  ),
+                  headerShown: false,
+                }}
+              />
+              <Tab.Screen
+                name="EisenhowerMatrix"
+                component={EisenhowerMatrix}
+                options={{
+                  tabBarIcon: ({ focused }) => (
+                    <MaterialCommunityIcons
+                      name="matrix"
+                      size={24}
+                      color={focused ? "#000000" : "#9966CC"}
                     />
                   ),
                   headerShown: false,

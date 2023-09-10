@@ -5,25 +5,25 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#9966CC",
   },
   header: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#9966CC",
     textAlign: "center",
     fontVariant: "bold",
-    color: "#ffffff",
+    color: "#9966CC",
     paddingBottom: 20,
   },
   title: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#9966CC",
     textAlign: "center",
     fontSize: 40,
     fontWeight: "bold",
-    color: "#ffffff",
+    color: "#9966CC",
     paddingTop: 30,
   },
   text: {
-    color: "#ffffff",
+    color: "#9966CC",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     alignContent: "space-around",
   },
   subheading: {
-    color: "#ffffff",
+    color: "#9966CC",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   text: {
-    color: "#ffffff",
+    color: "#9966CC",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#000000",
   },
   subheading: {
-    color: "#ffffff",
+    color: "#9966CC",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
     width: "100%",
   },
   button: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#9966CC",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -87,7 +87,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   marginTopText: {
-    color: "#ffffff",
+    color: "#9966CC",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -102,7 +102,7 @@ export const styles = StyleSheet.create({
 
   checkboxLabel: {
     marginLeft: 10,
-    color: "#ffffff",
+    color: "#9966CC",
     fontSize: 16,
   },
 });

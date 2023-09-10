@@ -15,9 +15,9 @@ const AccountabilityMirrorHome = () => {
         initialRouteName="AccountabilityMirror"
         screenOptions={{
           headerStyle: {
-            backgroundColor: "#ffffff",
+            backgroundColor: "#9966CC",
           },
-          headerTintColor: "#ffffff",
+          headerTintColor: "#9966CC",
           headerTitleStyle: {
             fontWeight: "bold",
           },

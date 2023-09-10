@@ -15,14 +15,14 @@ export default function AdditionalScreen() {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: "#000000",
-        tabBarInactiveTintColor: "#ffffff",
-        tabBarActiveBackgroundColor: "#ffffff",
+        tabBarInactiveTintColor: "#9966CC",
+        tabBarActiveBackgroundColor: "#9966CC",
         tabBarInactiveBackgroundColor: "#000000",
         headerStyle: {
           backgroundColor: "#000000",
         },
         headerTitleStyle: {
-          color: "#ffffff",
+          color: "#9966CC",
           fontWeight: "bold",
           fontSize: 25,
         },
@@ -36,7 +36,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="sword"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "#9966CC"}
             />
           ),
           headerShown: false,
@@ -50,7 +50,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="bookshelf"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "#9966CC"}
             />
           ),
           headerShown: false,
@@ -65,7 +65,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "#9966CC"}
             />
           ),
           headerShown: false,
@@ -79,7 +79,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "#9966CC"}
             />
           ),
           headerShown: false,
@@ -93,7 +93,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "#9966CC"}
             />
           ),
           headerShown: false,
@@ -108,7 +108,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="movie-open"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "#9966CC"}
             />
           ),
           headerShown: false,
@@ -122,7 +122,7 @@ export default function AdditionalScreen() {
             <Entypo
               name="folder"
               size={24}
-              color={focused ? "#000000" : "#ffffff"}
+              color={focused ? "#000000" : "#9966CC"}
             />
           ),
           headerShown: false,

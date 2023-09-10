@@ -69,10 +69,10 @@ const ArmouredMind = () => {
           style={{
             height: 100,
             borderWidth: 1,
-            borderColor: "#ccc",
+            borderColor: "#9966CC",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#ffffff",
+            color: "#9966CC",
             paddingHorizontal: 20,
           }}
           multiline
@@ -86,10 +86,10 @@ const ArmouredMind = () => {
           style={{
             height: 100,
             borderWidth: 1,
-            borderColor: "#ccc",
+            borderColor: "#9966CC",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#ffffff",
+            color: "#9966CC",
             paddingHorizontal: 20,
           }}
           multiline
@@ -105,10 +105,10 @@ const ArmouredMind = () => {
           style={{
             height: 100,
             borderWidth: 1,
-            borderColor: "#ccc",
+            borderColor: "#9966CC",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#ffffff",
+            color: "#9966CC",
             paddingHorizontal: 20,
           }}
           multiline
@@ -122,10 +122,10 @@ const ArmouredMind = () => {
           style={{
             height: 100,
             borderWidth: 1,
-            borderColor: "#ccc",
+            borderColor: "#9966CC",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#ffffff",
+            color: "#9966CC",
             paddingHorizontal: 20,
           }}
           multiline

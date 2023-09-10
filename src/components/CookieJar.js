@@ -190,13 +190,13 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#9966CC",
     borderRadius: 4,
     padding: 10,
-    color: "#ffffff",
+    color: "#9966CC",
   },
   addButton: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#9966CC",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -220,21 +220,21 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#ffffff",
+    color: "#9966CC",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#ffffff",
+    color: "#9966CC",
   },
   text: {
-    color: "#ffffff",
+    color: "#9966CC",
     marginBottom: 10,
     textAlign: "center",
   },
   subheading: {
-    color: "#ffffff",
+    color: "#9966CC",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
   },
   popupText: {
-    color: "#ffffff",
+    color: "#9966CC",
     fontSize: 18,
     padding: 20,
     backgroundColor: "#333",

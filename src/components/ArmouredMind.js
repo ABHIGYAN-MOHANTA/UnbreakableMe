@@ -53,7 +53,7 @@ const ArmouredMind = () => {
       }}
     >
       <View style={styles.subsection}>
-        <Text style={[styles.subheading, { marginTop: -20 }]}>
+        <Text style={[styles.subheading, { marginTop: -35 }]}>
           Armoured Mind
         </Text>
         <Text style={styles.marginTopText}>
@@ -69,10 +69,10 @@ const ArmouredMind = () => {
           style={{
             height: 100,
             borderWidth: 1,
-            borderColor: "#9966CC",
+            borderColor: "#F0E68C",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#9966CC",
+            color: "#F0E68C",
             paddingHorizontal: 20,
           }}
           multiline
@@ -86,10 +86,10 @@ const ArmouredMind = () => {
           style={{
             height: 100,
             borderWidth: 1,
-            borderColor: "#9966CC",
+            borderColor: "#F0E68C",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#9966CC",
+            color: "#F0E68C",
             paddingHorizontal: 20,
           }}
           multiline
@@ -105,10 +105,10 @@ const ArmouredMind = () => {
           style={{
             height: 100,
             borderWidth: 1,
-            borderColor: "#9966CC",
+            borderColor: "#F0E68C",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#9966CC",
+            color: "#F0E68C",
             paddingHorizontal: 20,
           }}
           multiline
@@ -122,10 +122,10 @@ const ArmouredMind = () => {
           style={{
             height: 100,
             borderWidth: 1,
-            borderColor: "#9966CC",
+            borderColor: "#F0E68C",
             borderRadius: 4,
             marginBottom: 10,
-            color: "#9966CC",
+            color: "#F0E68C",
             paddingHorizontal: 20,
           }}
           multiline

@@ -29,7 +29,7 @@ const PBDHome = () => {
         initialRouteName="PBDEmpty"
         screenOptions={{
           headerStyle: {
-            backgroundColor: "#9966CC",
+            backgroundColor: "#F0E68C",
           },
           headerTintColor: "#E6DDC4",
           headerTitleStyle: {
@@ -116,7 +116,7 @@ export default PBDHome;
 
 const styleSheet = StyleSheet.create({
   button: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,

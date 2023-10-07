@@ -88,7 +88,7 @@ const EmpowermentOfFailure = () => {
   );
   return (
     <View style={styless.container}>
-      <Text style={[styles.subheading, { marginTop: -20 }]}>
+      <Text style={[styles.subheading, { marginTop: -30 }]}>
         Empowerment of Failure
       </Text>
       <Text style={styless.text}>
@@ -139,13 +139,13 @@ const styless = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#9966CC",
+    borderColor: "#F0E68C",
     borderRadius: 4,
     padding: 10,
-    color: "#9966CC",
+    color: "#F0E68C",
   },
   addButton: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -169,18 +169,19 @@ const styless = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#9966CC",
+    color: "#F0E68C",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#9966CC",
+    color: "#F0E68C",
   },
   text: {
-    color: "#9966CC",
+    color: "#F0E68C",
     marginBottom: 10,
     textAlign: "center",
     marginTop: 20,
+    fontSize: 18,
   },
 });

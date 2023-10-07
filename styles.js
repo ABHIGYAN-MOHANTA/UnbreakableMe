@@ -8,22 +8,22 @@ export const styles = StyleSheet.create({
     backgroundColor: "#000000",
   },
   header: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     textAlign: "center",
     fontVariant: "bold",
     color: "#000000",
     paddingBottom: 20,
   },
   title: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     textAlign: "center",
     fontSize: 40,
     fontWeight: "bold",
-    color: "#181D31",
+    color: "#000000",
     paddingTop: 30,
   },
   text: {
-    color: "#9966CC",
+    color: "#F0E68C",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -35,12 +35,13 @@ export const styles = StyleSheet.create({
     alignContent: "space-around",
   },
   subheading: {
-    color: "#9966CC",
+    color: "#F0E68C",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
     paddingTop: 20,
     paddingBottom: 20,
+    marginTop: -10,
   },
   modalBackground: {
     flex: 1,
@@ -49,7 +50,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
   },
   modalContent: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     padding: 20,
     borderRadius: 10,
     width: "80%", // Adjust the width as needed
@@ -62,7 +63,7 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   button: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -81,15 +82,15 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: 60,
     borderWidth: 1,
-    borderColor: "#9966CC",
+    borderColor: "#F0E68C",
     borderRadius: 4,
     padding: 10,
     marginHorizontal: 10,
     marginBottom: 5,
     color: "#000000",
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
   },
   sidetext: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
   },
 });

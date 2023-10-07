@@ -87,6 +87,7 @@ const NotImportantUrgent = () => {
   );
   return (
     <View style={styles.container}>
+      <Text style={styles.subheading}>NOT IMPORTANT URGENT</Text>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -142,6 +143,15 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     justifyContent: "center",
     alignItems: "center",
+  },
+  subheading: {
+    color: "#000000",
+    fontSize: 20,
+    fontWeight: "bold",
+    alignSelf: "center",
+    paddingTop: 20,
+    marginTop: -30,
+    marginBottom: 10,
   },
   addbuttonText: {
     color: "#FFC107",

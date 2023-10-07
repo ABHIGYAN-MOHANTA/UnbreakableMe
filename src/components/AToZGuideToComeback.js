@@ -22,16 +22,7 @@ const Item = (props) => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Text style={styles.text}>
-          {
-            <MaterialCommunityIcons
-              name="star-four-points"
-              size={24}
-              color="#9966CC"
-            />
-          }{" "}
-          {text}
-        </Text>
+        <Text style={styles.text}>{text}</Text>
       </ScrollView>
     </SafeAreaView>
   );
@@ -40,7 +31,9 @@ const AToZGuideToComeback = () => {
   const renderItem = ({ item }) => <Item text={item.text} />;
   return (
     <View style={styles.subsection}>
-      <Text style={styles.subheading}>The A to Z Guide to Comeback</Text>
+      <Text style={[styles.subheading, { marginBottom: 10 }]}>
+        The A to Z Guide to Comeback
+      </Text>
       <FlatList
         data={DATA}
         renderItem={renderItem}

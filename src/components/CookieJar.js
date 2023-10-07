@@ -7,6 +7,7 @@ import {
   FlatList,
   StyleSheet,
   Modal,
+  ScrollView,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -104,68 +105,75 @@ const CookieJar = () => {
     </View>
   );
   return (
-    <View style={styles.container}>
-      <Text style={styles.subheading}>Cookie Jar</Text>
-      <Text style={styles.text}>
-        Whenever you faced failure or rejection, but then you turned things
-        around and triumphed, these memories are your cookies in your mental
-        cookie jar! When life gets tough and things look bleak, you reach into
-        this jar, grab a cookie, and remind yourself of your past victories.
-        Gather strength from your own history of overcoming obstacles.
-      </Text>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Write here..."
-          value={newTask}
-          onChangeText={setNewTask}
-        />
-        <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
+    <ScrollView
+      contentContainerStyle={{
+        flexGrow: 1,
+        backgroundColor: "#000000",
+      }}
+    >
+      <View style={styles.container}>
+        <Text style={styles.subheading}>Cookie Jar</Text>
+        <Text style={styles.text}>
+          Whenever you faced failure or rejection, but then you turned things
+          around and triumphed, these memories are your cookies in your mental
+          cookie jar! When life gets tough and things look bleak, you reach into
+          this jar, grab a cookie, and remind yourself of your past victories.
+          Gather strength from your own history of overcoming obstacles.
+        </Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Write here..."
+            value={newTask}
+            onChangeText={setNewTask}
+          />
+          <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
+            <Text style={styles.addButtonText}>
+              {<FontAwesome name="plus" size={24} color="#000000" />}
+            </Text>
+          </TouchableOpacity>
+        </View>
+        {/* Button to display a random item */}
+        <TouchableOpacity style={styles.addButton} onPress={handleRandomItem}>
+          <Text style={styles.addButtonText}>Grab a Cookie</Text>
+        </TouchableOpacity>
+
+        {/* Display the randomly selected item */}
+        {randomItem && (
+          <Modal
+            animationType="fade"
+            transparent={true}
+            visible={showPopup}
+            onRequestClose={() => {
+              setShowPopup(false);
+            }}
+          >
+            <View style={styles.popupContainer}>
+              <Text style={styles.popupText}>
+                {randomItem ? randomItem.text : ""}
+              </Text>
+            </View>
+          </Modal>
+        )}
+        <View style={styles.gap}></View>
+        {/* Button to display the full flat list */}
+        <TouchableOpacity style={styles.addButton} onPress={toggleFullList}>
           <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#000000" />}
+            {showFullList ? "Hide Cookies" : "Show all Cookies"}
           </Text>
         </TouchableOpacity>
+        <View style={styles.gap}></View>
+        {/* Display the flat list */}
+        {showFullList && (
+          <FlatList
+            data={tasks}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id.toString()}
+            style={styles.flatList}
+          />
+        )}
       </View>
-      {/* Button to display a random item */}
-      <TouchableOpacity style={styles.addButton} onPress={handleRandomItem}>
-        <Text style={styles.addButtonText}>Grab a Cookie</Text>
-      </TouchableOpacity>
-
-      {/* Display the randomly selected item */}
-      {randomItem && (
-        <Modal
-          animationType="fade"
-          transparent={true}
-          visible={showPopup}
-          onRequestClose={() => {
-            setShowPopup(false);
-          }}
-        >
-          <View style={styles.popupContainer}>
-            <Text style={styles.popupText}>
-              {randomItem ? randomItem.text : ""}
-            </Text>
-          </View>
-        </Modal>
-      )}
-      <View style={styles.gap}></View>
-      {/* Button to display the full flat list */}
-      <TouchableOpacity style={styles.addButton} onPress={toggleFullList}>
-        <Text style={styles.addButtonText}>
-          {showFullList ? "Hide Cookies" : "Show all Cookies"}
-        </Text>
-      </TouchableOpacity>
-      <View style={styles.gap}></View>
-      {/* Display the flat list */}
-      {showFullList && (
-        <FlatList
-          data={tasks}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id.toString()}
-          style={styles.flatList}
-        />
-      )}
-    </View>
+    </ScrollView>
   );
 };
 
@@ -190,13 +198,13 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#9966CC",
+    borderColor: "#F0E68C",
     borderRadius: 4,
     padding: 10,
-    color: "#9966CC",
+    color: "#F0E68C",
   },
   addButton: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -220,26 +228,27 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#9966CC",
+    color: "#F0E68C",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#9966CC",
+    color: "#F0E68C",
   },
   text: {
-    color: "#9966CC",
+    color: "#F0E68C",
     marginBottom: 10,
     textAlign: "center",
+    fontSize: 18,
   },
   subheading: {
-    color: "#9966CC",
+    color: "#F0E68C",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
     paddingTop: 20,
-    marginTop: -25,
+    marginTop: -30,
     marginBottom: 10,
   },
   gap: {
@@ -252,7 +261,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
   },
   popupText: {
-    color: "#9966CC",
+    color: "#F0E68C",
     fontSize: 18,
     padding: 20,
     backgroundColor: "#333",

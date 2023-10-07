@@ -214,13 +214,13 @@ const Extras = () => {
         <TouchableOpacity
           onPress={() => handleLinkPress("https://github.com/ABHIGYAN-MOHANTA")}
         >
-          <FontAwesome name="github" size={30} color="#9966CC" />
+          <FontAwesome name="github" size={30} color="#F0E68C" />
         </TouchableOpacity>
 
         <TouchableOpacity
           onPress={() => handleLinkPress("https://twitter.com/MohantaAbhigyan")}
         >
-          <FontAwesome name="twitter" size={30} color="#9966CC" />
+          <FontAwesome name="twitter" size={30} color="#F0E68C" />
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -228,7 +228,7 @@ const Extras = () => {
             handleLinkPress("https://www.linkedin.com/in/abhigyan-mohanta/")
           }
         >
-          <FontAwesome name="linkedin" size={30} color="#9966CC" />
+          <FontAwesome name="linkedin" size={30} color="#F0E68C" />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() =>
@@ -237,12 +237,12 @@ const Extras = () => {
             )
           }
         >
-          <FontAwesome name="youtube" size={30} color="#9966CC" />
+          <FontAwesome name="youtube" size={30} color="#F0E68C" />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleLinkPress("https://abhigyan.start.page/")}
         >
-          <FontAwesome name="globe" size={30} color="#9966CC" />
+          <FontAwesome name="globe" size={30} color="#F0E68C" />
         </TouchableOpacity>
       </View>
       <Text></Text>

@@ -92,6 +92,7 @@ const ImportantNotUrgent = () => {
   );
   return (
     <View style={styles.container}>
+      <Text style={styles.subheading}>IMPORTANT NOT URGENT</Text>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -171,6 +172,15 @@ const styles = StyleSheet.create({
   },
   deleteButton: {
     color: "#ffffff",
+  },
+  subheading: {
+    color: "#000000",
+    fontSize: 20,
+    fontWeight: "bold",
+    alignSelf: "center",
+    paddingTop: 20,
+    marginTop: -30,
+    marginBottom: 10,
   },
 });
 

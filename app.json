@@ -2,14 +2,14 @@
   "expo": {
     "name": "UnbreakableMe",
     "slug": "UnbreakableMe",
-    "version": "1.0.2",
+    "version": "1.0.6",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#9966CC"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
@@ -21,7 +21,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#9966CC"
+        "backgroundColor": "#000000"
       },
       "permissions": [
         "android.permission.CAMERA",

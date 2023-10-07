@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
+  ScrollView,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -86,35 +87,42 @@ const TakingSouls = () => {
     </View>
   );
   return (
-    <View style={styles.container}>
-      <Text style={styles.subheading}>Taking Souls</Text>
-      <Text style={styles.text}>
-        When someone doesn't believe in you, work so hard that you surpass their
-        every expectation and they look at you in sheer awe. They don’t have to
-        like you, it’s about earned respect. You have achieved so much or worked
-        so damn hard that it breaks their preconceptions of you. Write down the
-        names of the people whose soul you are going to take!
-      </Text>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Write here..."
-          value={newTask}
-          onChangeText={setNewTask}
+    <ScrollView
+      contentContainerStyle={{
+        flexGrow: 1,
+        backgroundColor: "#000000",
+      }}
+    >
+      <View style={styles.container}>
+        <Text style={styles.subheading}>Taking Souls</Text>
+        <Text style={styles.text}>
+          When someone doesn't believe in you, work so hard that you surpass
+          their every expectation and they look at you in sheer awe. They don’t
+          have to like you, it’s about earned respect. You have achieved so much
+          or worked so damn hard that it breaks their preconceptions of you.
+          Write down the names of the people whose soul you are going to take!
+        </Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Write here..."
+            value={newTask}
+            onChangeText={setNewTask}
+          />
+          <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
+            <Text style={styles.addButtonText}>
+              {<FontAwesome name="plus" size={24} color="#000000" />}
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <FlatList
+          data={tasks}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+          style={styles.flatList}
         />
-        <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
-          <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#000000" />}
-          </Text>
-        </TouchableOpacity>
       </View>
-      <FlatList
-        data={tasks}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
-        style={styles.flatList}
-      />
-    </View>
+    </ScrollView>
   );
 };
 
@@ -137,13 +145,13 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#9966CC",
+    borderColor: "#F0E68C",
     borderRadius: 4,
     padding: 10,
-    color: "#9966CC",
+    color: "#F0E68C",
   },
   addButton: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -167,26 +175,27 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#9966CC",
+    color: "#F0E68C",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#9966CC",
+    color: "#F0E68C",
   },
   text: {
-    color: "#9966CC",
+    color: "#F0E68C",
     marginBottom: 10,
     textAlign: "center",
+    fontSize: 18,
   },
   subheading: {
-    color: "#9966CC",
+    color: "#F0E68C",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
     paddingTop: 20,
-    marginTop: -25,
+    marginTop: -35,
     marginBottom: 10,
   },
 });

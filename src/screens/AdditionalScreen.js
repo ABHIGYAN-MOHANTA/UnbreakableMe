@@ -1,56 +1,42 @@
 import AToZGuideToComeback from "../components/AToZGuideToComeback";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Entypo } from "@expo/vector-icons";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import PBDHome from "../components/PBDHome";
 import PBDSecondHome from "../components/PBDSecondHome";
 import PBDThirdHome from "../components/PBDThirdHome";
 import Extras from "../components/Extras";
-import Movies from "../components/Movies";
-import Books from "../components/Books";
-const Tab = createBottomTabNavigator();
+import BooksAndMovies from "../components/BooksAndMovies";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
+
+const Tab = createMaterialTopTabNavigator();
 
 export default function AdditionalScreen() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: "#000000",
-        tabBarInactiveTintColor: "#9966CC",
-        tabBarActiveBackgroundColor: "#9966CC",
-        tabBarInactiveBackgroundColor: "#000000",
-        headerStyle: {
-          backgroundColor: "#000000",
+        tabActiveTintColor: "#000000",
+        tabInactiveTintColor: "#000000",
+        tabActiveBackgroundColor: "#F0E68C",
+        tabInactiveBackgroundColor: "#000000",
+        headerTintColor: "#000000",
+        tabStyle: {
+          backgroundColor: "#F0E68C",
         },
-        headerTitleStyle: {
-          color: "#9966CC",
-          fontWeight: "bold",
-          fontSize: 25,
+        tabBarShowLabel: false,
+        tabBarContentContainerStyle: {
+          backgroundColor: "black",
         },
       }}
     >
       <Tab.Screen
-        name={"Comeback"}
+        name={"CBK"}
         component={AToZGuideToComeback}
         options={{
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name="sword"
               size={24}
-              color={focused ? "#000000" : "#9966CC"}
-            />
-          ),
-          headerShown: false,
-        }}
-      />
-      <Tab.Screen
-        name={"Books"}
-        component={Books}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name="bookshelf"
-              size={24}
-              color={focused ? "#000000" : "#9966CC"}
+              color={focused ? "#333333" : "#F0E68C"}
             />
           ),
           headerShown: false,
@@ -65,7 +51,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#000000" : "#9966CC"}
+              color={focused ? "#333333" : "#F0E68C"}
             />
           ),
           headerShown: false,
@@ -79,7 +65,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#000000" : "#9966CC"}
+              color={focused ? "#333333" : "#F0E68C"}
             />
           ),
           headerShown: false,
@@ -93,36 +79,35 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#000000" : "#9966CC"}
+              color={focused ? "#333333" : "#F0E68C"}
             />
           ),
           headerShown: false,
         }}
       />
-
       <Tab.Screen
-        name={"Movies"}
-        component={Movies}
+        name={"Ref"}
+        component={BooksAndMovies}
         options={{
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
-              name="movie-open"
+              name="bookshelf"
               size={24}
-              color={focused ? "#000000" : "#9966CC"}
+              color={focused ? "#333333" : "#F0E68C"}
             />
           ),
           headerShown: false,
         }}
       />
       <Tab.Screen
-        name={"Extras"}
+        name={"Extra"}
         component={Extras}
         options={{
           tabBarIcon: ({ focused }) => (
             <Entypo
               name="folder"
               size={24}
-              color={focused ? "#000000" : "#9966CC"}
+              color={focused ? "#333333" : "#F0E68C"}
             />
           ),
           headerShown: false,

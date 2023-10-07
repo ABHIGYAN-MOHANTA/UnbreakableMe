@@ -5,25 +5,25 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
   },
   header: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     textAlign: "center",
     fontVariant: "bold",
-    color: "#9966CC",
+    color: "#F0E68C",
     paddingBottom: 20,
   },
   title: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     textAlign: "center",
     fontSize: 40,
     fontWeight: "bold",
-    color: "#9966CC",
+    color: "#F0E68C",
     paddingTop: 30,
   },
   text: {
-    color: "#9966CC",
+    color: "#F0E68C",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
@@ -35,19 +35,21 @@ export const styles = StyleSheet.create({
     alignContent: "space-around",
   },
   subheading: {
-    color: "#9966CC",
+    color: "#F0E68C",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
     paddingTop: 20,
     paddingBottom: 20,
+    marginTop: -10,
   },
   text: {
-    color: "#9966CC",
+    color: "#F0E68C",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
     textAlign: "center",
+    fontSize: 18,
   },
   subsection: {
     flexDirection: "column",
@@ -57,11 +59,12 @@ export const styles = StyleSheet.create({
     backgroundColor: "#000000",
   },
   subheading: {
-    color: "#9966CC",
+    color: "#F0E68C",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
     paddingTop: 20,
+    marginTop: -10,
   },
   footer: {
     justifyContent: "flex-end",
@@ -72,7 +75,7 @@ export const styles = StyleSheet.create({
     width: "100%",
   },
   button: {
-    backgroundColor: "#9966CC",
+    backgroundColor: "#F0E68C",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -87,12 +90,13 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   marginTopText: {
-    color: "#9966CC",
+    color: "#F0E68C",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
     textAlign: "center",
     marginTop: 20,
+    fontSize: 18,
   },
   checkboxContainer: {
     flexDirection: "row",
@@ -102,7 +106,7 @@ export const styles = StyleSheet.create({
 
   checkboxLabel: {
     marginLeft: 10,
-    color: "#9966CC",
+    color: "#F0E68C",
     fontSize: 16,
   },
 });

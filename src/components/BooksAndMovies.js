@@ -12,19 +12,19 @@ const BooksAndMovies = () => {
     Linking.openURL(url);
   };
   return (
-    <View style={{ flex: 1 }}>
-      <Video
-        ref={video}
-        style={styles.backgroundVideo}
-        source={require("../../assets/movie.mp4")}
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-        onLoad={() => {
-          video.current.playAsync(0);
-        }}
-      />
+    <View style={{ flex: 1, backgroundColor: "#000000" }}>
       <View style={styles.subsection}>
+        <Video
+          ref={video}
+          style={styles.backgroundVideo}
+          source={require("../../assets/movie.mp4")}
+          resizeMode="cover"
+          isLooping
+          onPlaybackStatusUpdate={setStatus}
+          onLoad={() => {
+            video.current.playAsync(0);
+          }}
+        />
         <Text style={[styles.subheading, { marginBottom: 10 }]}>
           REFERENCES & RESOURCES
         </Text>

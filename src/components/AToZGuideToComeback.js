@@ -34,19 +34,19 @@ const AToZGuideToComeback = () => {
   const [status, setStatus] = React.useState({});
   const renderItem = ({ item }) => <Item text={item.text} />;
   return (
-    <View style={{ flex: 1 }}>
-      <Video
-        ref={video}
-        style={styles.backgroundVideo}
-        source={require("../../assets/comeback.mp4")}
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-        onLoad={() => {
-          video.current.playAsync(0);
-        }}
-      />
+    <View style={{ flex: 1, backgroundColor: "#000000" }}>
       <View style={styles.subsection}>
+        <Video
+          ref={video}
+          style={styles.backgroundVideo}
+          source={require("../../assets/comeback.mp4")}
+          resizeMode="cover"
+          isLooping
+          onPlaybackStatusUpdate={setStatus}
+          onLoad={() => {
+            video.current.playAsync(0);
+          }}
+        />
         <Text style={styles.subheading}>The A to Z Guide to Comeback</Text>
         <FlatList
           data={DATA}

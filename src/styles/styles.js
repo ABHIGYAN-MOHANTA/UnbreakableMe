@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignContent: "space-around",
+    backgroundColor: "#000000",
   },
   subheading: {
     color: "#B0D9B1",

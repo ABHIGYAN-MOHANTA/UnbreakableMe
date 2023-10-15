@@ -108,7 +108,7 @@ const CookieJar = () => {
     </View>
   );
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#000000" }}>
       <Video
         ref={video}
         style={styles.backgroundVideo}

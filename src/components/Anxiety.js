@@ -6,7 +6,7 @@ import WebView from "react-native-webview";
 const Anxiety = () => {
   return (
     <View style={styles.subsection}>
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: "#000000" }}>
         <WebView
           style={{ marginTop: Platform.OS == "ios" ? 20 : 0 }}
           javaScriptEnabled={true}

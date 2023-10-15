@@ -10,12 +10,11 @@ const Stack = createStackNavigator();
 const TakingInventoryHome = () => {
   return (
     <View style={styles.subsection}>
-      <Text style={styles.subheading}>Taking Inventory Home</Text>
       <Stack.Navigator
         initialRouteName="Taking Inventory"
         screenOptions={{
           headerStyle: {
-            backgroundColor: "#F0E68C",
+            backgroundColor: "#B0D9B1",
           },
           headerTintColor: "#000000",
           headerTitleStyle: {

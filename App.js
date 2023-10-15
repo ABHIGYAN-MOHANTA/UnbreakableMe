@@ -41,20 +41,23 @@ export default function App() {
       <View style={styles.container} {...panResponder.panHandlers}>
         <View style={styles.container}>
           <Text style={styles.title}>UnbreakableMe</Text>
-          <Text style={styles.header}>inspired by David Goggins and PBD</Text>
+          <Text style={styles.header}>
+            inspired by David Goggins and PBD! Swipe ✌🏻 Down!
+          </Text>
+
           <StatusBar style="dark" />
           <NavigationContainer>
             <Tab.Navigator
               screenOptions={{
                 tabBarActiveTintColor: "#000000",
-                tabBarInactiveTintColor: "#F0E68C",
-                tabBarActiveBackgroundColor: "#F0E68C",
+                tabBarInactiveTintColor: "#B0D9B1",
+                tabBarActiveBackgroundColor: "#B0D9B1",
                 tabBarInactiveBackgroundColor: "#000000",
                 headerStyle: {
                   backgroundColor: "#000000",
                 },
                 headerTitleStFocusedyle: {
-                  color: "#F0E68C",
+                  color: "#B0D9B1",
                   fontWeight: "bold",
                   fontSize: 25,
                 },
@@ -68,7 +71,7 @@ export default function App() {
                     <FontAwesome5
                       name="dharmachakra"
                       size={24}
-                      color={focused ? "#000000" : "#F0E68C"}
+                      color={focused ? "#000000" : "#B0D9B1"}
                     />
                   ),
                   headerShown: false,
@@ -82,7 +85,7 @@ export default function App() {
                     <FontAwesome
                       name="briefcase"
                       size={24}
-                      color={focused ? "#000000" : "#F0E68C"}
+                      color={focused ? "#000000" : "#B0D9B1"}
                     />
                   ),
                   headerShown: false,
@@ -96,7 +99,7 @@ export default function App() {
                     <MaterialCommunityIcons
                       name="robot-excited-outline"
                       size={24}
-                      color={focused ? "#000000" : "#F0E68C"}
+                      color={focused ? "#000000" : "#B0D9B1"}
                     />
                   ),
                   headerShown: false,
@@ -110,7 +113,7 @@ export default function App() {
                     <MaterialCommunityIcons
                       name="matrix"
                       size={24}
-                      color={focused ? "#000000" : "#F0E68C"}
+                      color={focused ? "#000000" : "#B0D9B1"}
                     />
                   ),
                   headerShown: false,

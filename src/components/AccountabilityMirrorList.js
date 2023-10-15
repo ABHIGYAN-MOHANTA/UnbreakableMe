@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#F0E68C",
+    borderColor: "#B0D9B1",
     borderRadius: 4,
     padding: 10,
     color: "#000000",
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: "#F0E68C", // Border color to mimic sticky note paper
+    borderColor: "#B0D9B1", // Border color to mimic sticky note paper
     alignItems: "center",
     justifyContent: "space-between",
     shadowColor: "#000", // Shadow color
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#F0E68C",
+    color: "#B0D9B1",
     textShadowColor: "black",
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 2,

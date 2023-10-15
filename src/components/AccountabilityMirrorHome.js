@@ -10,16 +10,13 @@ const Stack = createStackNavigator();
 const AccountabilityMirrorHome = () => {
   return (
     <View style={styles.subsection}>
-      <Text style={[styles.subheading, { marginBottom: 10, marginTop: -10 }]}>
-        Accountability Mirror
-      </Text>
       <Stack.Navigator
         initialRouteName="AccountabilityMirror"
         screenOptions={{
           headerStyle: {
-            backgroundColor: "#F0E68C",
+            backgroundColor: "#B0D9B1",
           },
-          headerTintColor: "#F0E68C",
+          headerTintColor: "#B0D9B1",
           headerTitleStyle: {
             fontWeight: "bold",
           },

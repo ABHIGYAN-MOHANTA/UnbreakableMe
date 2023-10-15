@@ -38,14 +38,14 @@ const BreathingBar = () => {
       <Text
         style={{
           backgroundColor: "#000000",
-          color: "#F0E68C",
+          color: "#B0D9B1",
           marginVertical: 10,
         }}
       >
         Follow this for the 4-7-8 Breathing Style! Breathe in for 4 secs, hold
         for 7 and release for 8 seconds!
       </Text>
-      <View style={{ width: "100%", height: 20, backgroundColor: "#F0E68C" }}>
+      <View style={{ width: "100%", height: 20, backgroundColor: "#B0D9B1" }}>
         <Animated.View style={barStyle} />
       </View>
     </View>

@@ -24,12 +24,12 @@ const PBDHome = () => {
   const route = useRoute();
 
   return (
-    <SafeAreaView style={styles.subsection}>
+    <SafeAreaView style={[styles.subsection, { backgroundColor: "#000000" }]}>
       <Stack.Navigator
         initialRouteName="PBDEmpty"
         screenOptions={{
           headerStyle: {
-            backgroundColor: "#F0E68C",
+            backgroundColor: "#B0D9B1",
           },
           headerTintColor: "#E6DDC4",
           headerTitleStyle: {
@@ -116,7 +116,7 @@ export default PBDHome;
 
 const styleSheet = StyleSheet.create({
   button: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,

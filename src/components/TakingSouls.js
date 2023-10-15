@@ -11,10 +11,13 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import { Video } from "expo-av";
 
 const TakingSouls = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
 
   // Load data from AsyncStorage on component mount
   useEffect(() => {
@@ -87,42 +90,55 @@ const TakingSouls = () => {
     </View>
   );
   return (
-    <ScrollView
-      contentContainerStyle={{
-        flexGrow: 1,
-        backgroundColor: "#000000",
-      }}
-    >
-      <View style={styles.container}>
-        <Text style={styles.subheading}>Taking Souls</Text>
-        <Text style={styles.text}>
-          When someone doesn't believe in you, work so hard that you surpass
-          their every expectation and they look at you in sheer awe. They don’t
-          have to like you, it’s about earned respect. You have achieved so much
-          or worked so damn hard that it breaks their preconceptions of you.
-          Write down the names of the people whose soul you are going to take!
-        </Text>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="Write here..."
-            value={newTask}
-            onChangeText={setNewTask}
+    <View style={{ flex: 1 }}>
+      <Video
+        ref={video}
+        style={styles.backgroundVideo}
+        source={require("../../assets/soul.mp4")}
+        resizeMode="cover"
+        isLooping
+        onPlaybackStatusUpdate={setStatus}
+        onLoad={() => {
+          video.current.playAsync(0);
+        }}
+      />
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+        }}
+      >
+        <View style={styles.container}>
+          <Text style={styles.subheading}>Taking Souls</Text>
+          <Text style={styles.text}>
+            When someone doesn't believe in you, work so hard that you surpass
+            their every expectation and they look at you in sheer awe. They
+            don’t have to like you, it’s about earned respect. You have achieved
+            so much or worked so damn hard that it breaks their preconceptions
+            of you. Write down the names of the people whose soul you are going
+            to take!
+          </Text>
+          <View style={styles.inputContainer}>
+            <TextInput
+              style={styles.input}
+              placeholder="Write here..."
+              value={newTask}
+              onChangeText={setNewTask}
+            />
+            <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
+              <Text style={styles.addButtonText}>
+                {<FontAwesome name="plus" size={24} color="#000000" />}
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <FlatList
+            data={tasks}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id.toString()}
+            style={styles.flatList}
           />
-          <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
-            <Text style={styles.addButtonText}>
-              {<FontAwesome name="plus" size={24} color="#000000" />}
-            </Text>
-          </TouchableOpacity>
         </View>
-        <FlatList
-          data={tasks}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id.toString()}
-          style={styles.flatList}
-        />
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 
@@ -130,7 +146,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#000000",
   },
   header: {
     fontSize: 24,
@@ -145,13 +160,13 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#F0E68C",
+    borderColor: "#B0D9B1",
     borderRadius: 4,
     padding: 10,
-    color: "#F0E68C",
+    color: "#B0D9B1",
   },
   addButton: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -175,28 +190,45 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#F0E68C",
+    color: "#B0D9B1",
+    backgroundColor: "#00000080",
+    borderRadius: 10,
+    padding: 10,
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#F0E68C",
+    color: "#B0D9B1",
   },
   text: {
-    color: "#F0E68C",
+    color: "#B0D9B1",
     marginBottom: 10,
     textAlign: "center",
     fontSize: 18,
+    backgroundColor: "#00000080",
+    borderRadius: 10,
+    padding: 10,
   },
   subheading: {
-    color: "#F0E68C",
+    color: "#B0D9B1",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
     paddingTop: 20,
     marginTop: -35,
     marginBottom: 10,
+    backgroundColor: "#00000080",
+    borderRadius: 10,
+    padding: 10,
+  },
+  backgroundVideo: {
+    flex: 1,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 });
 

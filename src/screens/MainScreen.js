@@ -13,7 +13,6 @@ import Schedule from "../components/Schedule";
 import UncommonAmongstUncommon from "../components/UncommonAmongstUncommon";
 import { Ionicons } from "@expo/vector-icons";
 import EmpowermentOfFailure from "../components/EmpowermentOfFailure";
-import Intro from "../components/Intro";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -23,11 +22,11 @@ export default function MainScreen() {
       screenOptions={{
         tabActiveTintColor: "#000000",
         tabInactiveTintColor: "#000000",
-        tabActiveBackgroundColor: "#F0E68C",
+        tabActiveBackgroundColor: "#B0D9B1",
         tabInactiveBackgroundColor: "#000000",
         headerTintColor: "#000000",
         tabStyle: {
-          backgroundColor: "#F0E68C",
+          backgroundColor: "#B0D9B1",
         },
         tabBarShowLabel: false,
         tabBarContentContainerStyle: {
@@ -36,20 +35,6 @@ export default function MainScreen() {
       }}
     >
       <Tab.Screen
-        name="I"
-        component={Intro}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name="water-well"
-              size={24}
-              color={focused ? "#333333" : "#F0E68C"}
-            />
-          ),
-          headerTitle: "Intro",
-        }}
-      />
-      <Tab.Screen
         name="II"
         component={TakingInventoryHome}
         options={{
@@ -57,7 +42,7 @@ export default function MainScreen() {
             <MaterialIcons
               name="inventory"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
           headerTitle: "Taking Inventory",
@@ -71,7 +56,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="mirror-variant"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
           headerTitle: "Accountability Mirror",
@@ -85,7 +70,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="grav"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -98,7 +83,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="ghost"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -111,7 +96,7 @@ export default function MainScreen() {
             <MaterialCommunityIcons
               name="brain"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -124,7 +109,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="cookie-bite"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -137,7 +122,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="brain"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -150,7 +135,7 @@ export default function MainScreen() {
             <MaterialIcons
               name="schedule"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -163,7 +148,7 @@ export default function MainScreen() {
             <FontAwesome5
               name="wolf-pack-battalion"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -176,7 +161,7 @@ export default function MainScreen() {
             <Ionicons
               name="ios-trophy-sharp"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}

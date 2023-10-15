@@ -17,11 +17,11 @@ export default function EisenhowerMatrix() {
       screenOptions={{
         tabActiveTintColor: "#000000",
         tabInactiveTintColor: "#000000",
-        tabActiveBackgroundColor: "#F0E68C",
+        tabActiveBackgroundColor: "#B0D9B1",
         tabInactiveBackgroundColor: "#000000",
         headerTintColor: "#000000",
         tabStyle: {
-          backgroundColor: "#F0E68C",
+          backgroundColor: "#B0D9B1",
         },
         tabBarShowLabel: false,
         tabBarContentContainerStyle: {
@@ -37,7 +37,7 @@ export default function EisenhowerMatrix() {
             <AntDesign
               name="clockcircle"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -50,7 +50,7 @@ export default function EisenhowerMatrix() {
             <Ionicons
               name="ios-calendar"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -64,7 +64,7 @@ export default function EisenhowerMatrix() {
             <MaterialCommunityIcons
               name="share-all-outline"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}
@@ -77,7 +77,7 @@ export default function EisenhowerMatrix() {
             <Ionicons
               name="ios-trash"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
         }}

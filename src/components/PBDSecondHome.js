@@ -24,14 +24,14 @@ const PBDSecondHome = () => {
   const route = useRoute();
 
   return (
-    <SafeAreaView style={styles.subsection}>
+    <SafeAreaView style={[styles.subsection, { backgroundColor: "#000000" }]}>
       <Stack.Navigator
         initialRouteName="PBDEmpty"
         screenOptions={{
           headerStyle: {
-            backgroundColor: "#F0E68C",
+            backgroundColor: "#B0D9B1",
           },
-          headerTintColor: "#F0E68C",
+          headerTintColor: "#B0D9B1",
           headerTitleStyle: {
             fontWeight: "bold",
           },
@@ -118,7 +118,7 @@ export default PBDSecondHome;
 
 const styleSheet = StyleSheet.create({
   button: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,

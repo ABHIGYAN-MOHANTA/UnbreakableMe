@@ -10,6 +10,7 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import { Video } from "expo-av";
 
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
@@ -64,6 +65,9 @@ const TodoList = () => {
     saveData(updatedTasks); // Save data to AsyncStorage
   };
 
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
+
   const renderItem = ({ item }) => (
     <View style={styles.taskContainer}>
       <View style={styles.taskTextContainer}>
@@ -86,26 +90,39 @@ const TodoList = () => {
     </View>
   );
   return (
-    <View style={styles.container}>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Write here..."
-          value={newTask}
-          onChangeText={setNewTask}
-        />
-        <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
-          <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#000000" />}
-          </Text>
-        </TouchableOpacity>
-      </View>
-      <FlatList
-        data={tasks}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
-        style={styles.flatList}
+    <View style={{ flex: 1 }}>
+      <Video
+        ref={video}
+        style={styles.backgroundVideo}
+        source={require("../../assets/inventory.mp4")}
+        resizeMode="cover"
+        isLooping
+        onPlaybackStatusUpdate={setStatus}
+        onLoad={() => {
+          video.current.playAsync(0);
+        }}
       />
+      <View style={styles.container}>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Write here..."
+            value={newTask}
+            onChangeText={setNewTask}
+          />
+          <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
+            <Text style={styles.addButtonText}>
+              {<FontAwesome name="plus" size={24} color="#000000" />}
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <FlatList
+          data={tasks}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+          style={styles.flatList}
+        />
+      </View>
     </View>
   );
 };
@@ -114,7 +131,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#000000",
   },
   header: {
     fontSize: 24,
@@ -129,13 +145,13 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#F0E68C",
+    borderColor: "#B0D9B1",
     borderRadius: 4,
     padding: 10,
-    color: "#F0E68C",
+    color: "#B0D9B1",
   },
   addButton: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -159,13 +175,21 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#F0E68C",
+    color: "#B0D9B1",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#F0E68C",
+    color: "#B0D9B1",
+  },
+  backgroundVideo: {
+    flex: 1,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 });
 

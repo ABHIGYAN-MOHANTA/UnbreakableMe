@@ -16,11 +16,11 @@ export default function AdditionalScreen() {
       screenOptions={{
         tabActiveTintColor: "#000000",
         tabInactiveTintColor: "#000000",
-        tabActiveBackgroundColor: "#F0E68C",
+        tabActiveBackgroundColor: "#B0D9B1",
         tabInactiveBackgroundColor: "#000000",
         headerTintColor: "#000000",
         tabStyle: {
-          backgroundColor: "#F0E68C",
+          backgroundColor: "#B0D9B1",
         },
         tabBarShowLabel: false,
         tabBarContentContainerStyle: {
@@ -36,7 +36,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="sword"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
           headerShown: false,
@@ -51,7 +51,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
           headerShown: false,
@@ -65,7 +65,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
           headerShown: false,
@@ -79,7 +79,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="pillar"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
           headerShown: false,
@@ -93,7 +93,7 @@ export default function AdditionalScreen() {
             <MaterialCommunityIcons
               name="bookshelf"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
           headerShown: false,
@@ -107,7 +107,7 @@ export default function AdditionalScreen() {
             <Entypo
               name="folder"
               size={24}
-              color={focused ? "#333333" : "#F0E68C"}
+              color={focused ? "#333333" : "#B0D9B1"}
             />
           ),
           headerShown: false,

@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaView, ScrollView, View, Text, FlatList } from "react-native";
 import { styles } from "../styles/styles.js";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Video } from "expo-av";
 
 const DATA = [
   { text: "Find out why you failed in the first place" },
@@ -22,23 +22,38 @@ const Item = (props) => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Text style={styles.text}>{text}</Text>
+        <Text style={[styles.text, { backgroundColor: "rgba(0,0,0,0)" }]}>
+          {text}
+        </Text>
       </ScrollView>
     </SafeAreaView>
   );
 };
 const AToZGuideToComeback = () => {
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
   const renderItem = ({ item }) => <Item text={item.text} />;
   return (
-    <View style={styles.subsection}>
-      <Text style={[styles.subheading, { marginBottom: 10 }]}>
-        The A to Z Guide to Comeback
-      </Text>
-      <FlatList
-        data={DATA}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.text}
+    <View style={{ flex: 1 }}>
+      <Video
+        ref={video}
+        style={styles.backgroundVideo}
+        source={require("../../assets/comeback.mp4")}
+        resizeMode="cover"
+        isLooping
+        onPlaybackStatusUpdate={setStatus}
+        onLoad={() => {
+          video.current.playAsync(0);
+        }}
       />
+      <View style={styles.subsection}>
+        <Text style={styles.subheading}>The A to Z Guide to Comeback</Text>
+        <FlatList
+          data={DATA}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.text}
+        />
+      </View>
     </View>
   );
 };

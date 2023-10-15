@@ -11,10 +11,13 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { styles } from "../styles/styles";
+import { Video } from "expo-av";
 
 const EmpowermentOfFailure = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
 
   // Load data from AsyncStorage on component mount
   useEffect(() => {
@@ -87,33 +90,46 @@ const EmpowermentOfFailure = () => {
     </View>
   );
   return (
-    <View style={styless.container}>
-      <Text style={[styles.subheading, { marginTop: -30 }]}>
-        Empowerment of Failure
-      </Text>
-      <Text style={styless.text}>
-        Task: Write after reports of what happened after you committed to the
-        cause
-      </Text>
-      <View style={styless.inputContainer}>
-        <TextInput
-          style={styless.input}
-          placeholder="Write here..."
-          value={newTask}
-          onChangeText={setNewTask}
-        />
-        <TouchableOpacity style={styless.addButton} onPress={handleAddTask}>
-          <Text style={styless.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#000000" />}
-          </Text>
-        </TouchableOpacity>
-      </View>
-      <FlatList
-        data={tasks}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
-        style={styless.flatList}
+    <View style={{ flex: 1 }}>
+      <Video
+        ref={video}
+        style={styles.backgroundVideo}
+        source={require("../../assets/intro.mp4")}
+        resizeMode="cover"
+        isLooping
+        onPlaybackStatusUpdate={setStatus}
+        onLoad={() => {
+          video.current.playAsync(0);
+        }}
       />
+      <View style={styless.container}>
+        <Text style={[styles.subheading, { marginTop: -30 }]}>
+          Empowerment of Failure
+        </Text>
+        <Text style={styless.text}>
+          Task: Write after reports of what happened after you committed to the
+          cause
+        </Text>
+        <View style={styless.inputContainer}>
+          <TextInput
+            style={styless.input}
+            placeholder="Write here..."
+            value={newTask}
+            onChangeText={setNewTask}
+          />
+          <TouchableOpacity style={styless.addButton} onPress={handleAddTask}>
+            <Text style={styless.addButtonText}>
+              {<FontAwesome name="plus" size={24} color="#000000" />}
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <FlatList
+          data={tasks}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+          style={styless.flatList}
+        />
+      </View>
     </View>
   );
 };
@@ -124,7 +140,6 @@ const styless = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#000000",
   },
   header: {
     fontSize: 24,
@@ -139,13 +154,13 @@ const styless = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#F0E68C",
+    borderColor: "#B0D9B1",
     borderRadius: 4,
     padding: 10,
-    color: "#F0E68C",
+    color: "#B0D9B1",
   },
   addButton: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -169,19 +184,33 @@ const styless = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#F0E68C",
+    color: "#B0D9B1",
+    backgroundColor: "#00000080",
+    borderRadius: 10,
+    padding: 10,
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#F0E68C",
+    color: "#B0D9B1",
   },
   text: {
-    color: "#F0E68C",
+    color: "#B0D9B1",
     marginBottom: 10,
     textAlign: "center",
     marginTop: 20,
     fontSize: 18,
+    backgroundColor: "#00000080",
+    borderRadius: 10,
+    padding: 10,
+  },
+  backgroundVideo: {
+    flex: 1,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 });

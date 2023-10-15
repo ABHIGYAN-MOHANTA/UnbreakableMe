@@ -3,19 +3,26 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  backgroundVideo: {
+    flex: 1,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
   container: {
     flex: 1,
-    backgroundColor: "#000000",
   },
   header: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
     textAlign: "center",
     fontVariant: "bold",
     color: "#000000",
     paddingBottom: 20,
   },
   title: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
     textAlign: "center",
     fontSize: 40,
     fontWeight: "bold",
@@ -23,11 +30,14 @@ export const styles = StyleSheet.create({
     paddingTop: 30,
   },
   text: {
-    color: "#F0E68C",
+    color: "#B0D9B1",
     paddingRight: 20,
     paddingLeft: 20,
     marginBottom: 20,
     textAlign: "center",
+    backgroundColor: "#00000080",
+    borderRadius: 10,
+    padding: 10,
   },
   subsection: {
     flexDirection: "column",
@@ -35,13 +45,16 @@ export const styles = StyleSheet.create({
     alignContent: "space-around",
   },
   subheading: {
-    color: "#F0E68C",
+    color: "#B0D9B1",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
     paddingTop: 20,
     paddingBottom: 20,
     marginTop: -10,
+    backgroundColor: "#00000080",
+    borderRadius: 10,
+    padding: 10,
   },
   modalBackground: {
     flex: 1,
@@ -50,7 +63,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
   },
   modalContent: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
     padding: 20,
     borderRadius: 10,
     width: "80%", // Adjust the width as needed
@@ -63,7 +76,7 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   button: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -82,15 +95,15 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: 60,
     borderWidth: 1,
-    borderColor: "#F0E68C",
+    borderColor: "#B0D9B1",
     borderRadius: 4,
     padding: 10,
     marginHorizontal: 10,
     marginBottom: 5,
     color: "#000000",
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
   },
   sidetext: {
-    backgroundColor: "#F0E68C",
+    backgroundColor: "#B0D9B1",
   },
 });

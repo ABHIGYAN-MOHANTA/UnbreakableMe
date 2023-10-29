@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Text, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import { styles } from "../styles/styles.js";
 import { useNavigation } from "@react-navigation/native";
-import { Video } from "expo-av";
 
 const AccountabilityMirror = () => {
   const navigation = useNavigation();
@@ -10,16 +9,9 @@ const AccountabilityMirror = () => {
   const [status, setStatus] = React.useState({});
   return (
     <View style={{ flex: 1, backgroundColor: "#000000" }}>
-      <Video
-        ref={video}
-        style={styles.backgroundVideo}
-        source={require("../../assets/mirror.mp4")}
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-        onLoad={() => {
-          video.current.playAsync(0);
-        }}
+      <Image
+        source={require("../../assets/inventory.jpg")}
+        style={styles.backgroundImage}
       />
       <ScrollView
         contentContainerStyle={{

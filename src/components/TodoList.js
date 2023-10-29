@@ -6,11 +6,11 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
+  Image,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-import { Video } from "expo-av";
 
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
@@ -91,16 +91,9 @@ const TodoList = () => {
   );
   return (
     <View style={{ flex: 1, backgroundColor: "#000000" }}>
-      <Video
-        ref={video}
-        style={styles.backgroundVideo}
-        source={require("../../assets/inventory.mp4")}
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-        onLoad={() => {
-          video.current.playAsync(0);
-        }}
+      <Image
+        source={require("../../assets/inventory.jpg")}
+        style={styles.backgroundImage}
       />
       <View style={styles.container}>
         <View style={styles.inputContainer}>
@@ -183,13 +176,12 @@ const styles = StyleSheet.create({
   deleteButton: {
     color: "#B0D9B1",
   },
-  backgroundVideo: {
+  backgroundImage: {
     flex: 1,
+    resizeMode: "cover",
+    width: "100%",
+    height: "100%",
     position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
   },
 });
 

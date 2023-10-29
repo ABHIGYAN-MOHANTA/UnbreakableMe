@@ -7,11 +7,11 @@ import {
   FlatList,
   StyleSheet,
   ScrollView,
+  Image,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-import { Video } from "expo-av";
 
 const TakingSouls = () => {
   const [tasks, setTasks] = useState([]);
@@ -91,16 +91,9 @@ const TakingSouls = () => {
   );
   return (
     <View style={{ flex: 1, backgroundColor: "#000000" }}>
-      <Video
-        ref={video}
-        style={styles.backgroundVideo}
-        source={require("../../assets/soul.mp4")}
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-        onLoad={() => {
-          video.current.playAsync(0);
-        }}
+      <Image
+        source={require("../../assets/inventory.jpg")}
+        style={styles.backgroundImage}
       />
       <ScrollView
         contentContainerStyle={{
@@ -222,13 +215,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
   },
-  backgroundVideo: {
+  backgroundImage: {
     flex: 1,
+    resizeMode: "cover",
+    width: "100%",
+    height: "100%",
     position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
   },
 });
 

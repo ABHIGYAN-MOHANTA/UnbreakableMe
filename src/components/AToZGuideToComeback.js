@@ -1,7 +1,13 @@
 import React from "react";
-import { SafeAreaView, ScrollView, View, Text, FlatList } from "react-native";
+import {
+  SafeAreaView,
+  ScrollView,
+  View,
+  Text,
+  FlatList,
+  Image,
+} from "react-native";
 import { styles } from "../styles/styles.js";
-import { Video } from "expo-av";
 
 const DATA = [
   { text: "Find out why you failed in the first place" },
@@ -36,16 +42,9 @@ const AToZGuideToComeback = () => {
   return (
     <View style={{ flex: 1, backgroundColor: "#000000" }}>
       <View style={styles.subsection}>
-        <Video
-          ref={video}
-          style={styles.backgroundVideo}
-          source={require("../../assets/comeback.mp4")}
-          resizeMode="cover"
-          isLooping
-          onPlaybackStatusUpdate={setStatus}
-          onLoad={() => {
-            video.current.playAsync(0);
-          }}
+        <Image
+          source={require("../../assets/inventory.jpg")}
+          style={styles.backgroundImage}
         />
         <Text style={styles.subheading}>The A to Z Guide to Comeback</Text>
         <FlatList

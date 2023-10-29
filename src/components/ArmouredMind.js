@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, ScrollView, TextInput } from "react-native";
+import { View, Text, ScrollView, TextInput, Image } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { styles } from "../styles/styles.js";
-import { Video } from "expo-av";
 
 const ArmouredMind = () => {
   const [answers, setAnswers] = useState({
@@ -49,16 +48,9 @@ const ArmouredMind = () => {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#000000" }}>
-      <Video
-        ref={video}
-        style={styles.backgroundVideo}
-        source={require("../../assets/armourmind.mp4")}
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-        onLoad={() => {
-          video.current.playAsync(0);
-        }}
+      <Image
+        source={require("../../assets/inventory.jpg")}
+        style={styles.backgroundImage}
       />
       <ScrollView
         contentContainerStyle={{

@@ -1,23 +1,15 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, Image } from "react-native";
 import { styles } from "../styles/styles.js";
-import { Video } from "expo-av";
 
 const RemoveTheGovernor = () => {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   return (
     <View style={{ flex: 1, backgroundColor: "#000000" }}>
-      <Video
-        ref={video}
-        style={styles.backgroundVideo}
-        source={require("../../assets/removeg.mp4")}
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-        onLoad={() => {
-          video.current.playAsync(0);
-        }}
+      <Image
+        source={require("../../assets/inventory.jpg")}
+        style={styles.backgroundImage}
       />
       <ScrollView
         contentContainerStyle={{

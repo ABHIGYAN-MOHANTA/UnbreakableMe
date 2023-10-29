@@ -6,12 +6,12 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
+  Image,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { styles } from "../styles/styles";
-import { Video } from "expo-av";
 
 const EmpowermentOfFailure = () => {
   const [tasks, setTasks] = useState([]);
@@ -91,16 +91,9 @@ const EmpowermentOfFailure = () => {
   );
   return (
     <View style={{ flex: 1, backgroundColor: "#000000" }}>
-      <Video
-        ref={video}
-        style={styles.backgroundVideo}
-        source={require("../../assets/intro.mp4")}
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-        onLoad={() => {
-          video.current.playAsync(0);
-        }}
+      <Image
+        source={require("../../assets/inventory.jpg")}
+        style={styles.backgroundImage}
       />
       <View style={styless.container}>
         <Text style={[styles.subheading, { marginTop: -30 }]}>
@@ -205,12 +198,11 @@ const styless = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
   },
-  backgroundVideo: {
+  backgroundImage: {
     flex: 1,
+    resizeMode: "cover",
+    width: "100%",
+    height: "100%",
     position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
   },
 });

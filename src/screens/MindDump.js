@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
+  Image,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -87,33 +88,39 @@ const MindDump = () => {
     </View>
   );
   return (
-    <View style={styles.container}>
-      <Text style={styles.subheading}>Mind Dump</Text>
-      <Text style={styles.addbuttonText}>
-        Write down all your deep thoughts here! Use this like a Brain Dump!
-      </Text>
-      <Text></Text>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Write here..."
-          value={newTask}
-          onChangeText={setNewTask}
-        />
-        <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
-          <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#000000" />}
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      <FlatList
-        data={tasks}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
-        style={styles.flatList}
+    <View style={{ flex: 1, backgroundColor: "#000000" }}>
+      <Image
+        source={require("../../assets/inventory.jpg")}
+        style={styles.backgroundImage}
       />
-      <BreathingBar />
+      <View style={styles.container}>
+        <Text style={styles.subheading}>Mind Dump</Text>
+        <Text style={styles.addbuttonText}>
+          Write down all your deep thoughts here! Use this like a Brain Dump!
+        </Text>
+        <Text></Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Write here..."
+            value={newTask}
+            onChangeText={setNewTask}
+          />
+          <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
+            <Text style={styles.addButtonText}>
+              {<FontAwesome name="plus" size={24} color="#000000" />}
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        <FlatList
+          data={tasks}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+          style={styles.flatList}
+        />
+        <BreathingBar />
+      </View>
     </View>
   );
 };
@@ -122,7 +129,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#000000",
   },
   inputContainer: {
     flexDirection: "row",
@@ -176,6 +182,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "center",
     paddingBottom: 10,
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: "cover",
+    width: "100%",
+    height: "100%",
+    position: "absolute",
   },
 });
 

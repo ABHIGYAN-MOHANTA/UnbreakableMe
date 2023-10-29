@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
+  Image,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -86,27 +87,33 @@ const NotImportantUrgent = () => {
     </View>
   );
   return (
-    <View style={styles.container}>
-      <Text style={styles.subheading}>NOT IMPORTANT URGENT</Text>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Write here..."
-          value={newTask}
-          onChangeText={setNewTask}
-        />
-        <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
-          <Text style={styles.addButtonText}>
-            {<FontAwesome name="plus" size={24} color="#FFC107" />}
-          </Text>
-        </TouchableOpacity>
-      </View>
-      <FlatList
-        data={tasks}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
-        style={styles.flatList}
+    <View style={{ flex: 1, backgroundColor: "#000000" }}>
+      <Image
+        source={require("../../assets/green2.jpg")}
+        style={styles.backgroundImage}
       />
+      <View style={styles.container}>
+        <Text style={styles.subheading}>NOT IMPORTANT URGENT</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Write here..."
+            value={newTask}
+            onChangeText={setNewTask}
+          />
+          <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
+            <Text style={styles.addButtonText}>
+              {<FontAwesome name="plus" size={24} color="#FFC107" />}
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <FlatList
+          data={tasks}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+          style={styles.flatList}
+        />
+      </View>
     </View>
   );
 };
@@ -115,7 +122,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#FFC107",
+    // backgroundColor: "#FFC107",
   },
   header: {
     fontSize: 24,
@@ -130,13 +137,13 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: "#212529",
+    borderColor: "#CED4DA",
     borderRadius: 4,
     padding: 10,
-    color: "#212529",
+    color: "#CED4DA",
   },
   addButton: {
-    backgroundColor: "#212529",
+    backgroundColor: "#000000",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 4,
@@ -145,7 +152,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   subheading: {
-    color: "#000000",
+    color: "#CED4DA",
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
@@ -169,13 +176,20 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: "#212529",
+    color: "#CED4DA",
   },
   completedTask: {
     textDecorationLine: "line-through",
   },
   deleteButton: {
-    color: "#212529",
+    color: "#CED4DA",
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: "cover",
+    width: "100%",
+    height: "100%",
+    position: "absolute",
   },
 });
 

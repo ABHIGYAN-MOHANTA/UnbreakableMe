@@ -119,12 +119,11 @@ export const styles = StyleSheet.create({
     color: "#B0D9B1",
     fontSize: 16,
   },
-  backgroundVideo: {
+  backgroundImage: {
     flex: 1,
+    resizeMode: "cover",
+    width: "100%",
+    height: "100%",
     position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
   },
 });

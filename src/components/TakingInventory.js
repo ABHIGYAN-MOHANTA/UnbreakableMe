@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import { styles } from "../styles/styles.js";
 import { useNavigation } from "@react-navigation/native";
-import { Video } from "expo-av";
 
 const TakingInventory = () => {
   const video = React.useRef(null);
@@ -10,16 +9,9 @@ const TakingInventory = () => {
   const navigation = useNavigation();
   return (
     <View style={{ flex: 1, backgroundColor: "#000000" }}>
-      <Video
-        ref={video}
-        style={styles.backgroundVideo}
-        source={require("../../assets/inventory.mp4")}
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-        onLoad={() => {
-          video.current.playAsync(0);
-        }}
+      <Image
+        source={require("../../assets/inventory.jpg")}
+        style={styles.backgroundImage}
       />
       <View style={styles.subsection}>
         <Text style={styles.subheading}>Taking Inventory Home</Text>

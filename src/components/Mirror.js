@@ -1,7 +1,18 @@
 import { Camera, CameraType } from "expo-camera";
+import Constants from "expo-constants";
 import { useState } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View, Dimensions } from "react-native";
 import NotesApp from "./NotesApp";
+
+const windowWidth = Dimensions.get("window").width / 200;
+const screenWidthFromConstants =
+  Constants.platform === "ios"
+    ? Constants.platform.ios.displayWidth
+    : Constants.platform.android.displayWidth;
+const screenHeightFromConstants =
+  Constants.platform === "ios"
+    ? Constants.platform.ios.displayHeight
+    : Constants.platform.android.displayHeight;
 
 export default function Mirror() {
   const [type, setType] = useState(CameraType.front);
@@ -37,9 +48,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "black",
   },
   camera: {
-    flex: 1,
+    // height: screenHeightFromConstants,
+    width: screenWidthFromConstants,
+    aspectRatio: 3 / 4,
   },
   buttonContainer: {
     flex: 1,

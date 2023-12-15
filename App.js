@@ -9,8 +9,10 @@ import MainScreen from "./src/screens/MainScreen";
 import AdditionalScreen from "./src/screens/AdditionalScreen";
 import MindDump from "./src/screens/MindDump";
 import EisenhowerMatrix from "./src/screens/EisenhowerMatrix";
+import Chat from "./src/screens/Chat";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 import React, { useState } from "react";
 import quotes from "./src/components/MotivationalQuotes";
 
@@ -112,6 +114,20 @@ export default function App() {
                   tabBarIcon: ({ focused }) => (
                     <MaterialCommunityIcons
                       name="matrix"
+                      size={24}
+                      color={focused ? "#000000" : "#B0D9B1"}
+                    />
+                  ),
+                  headerShown: false,
+                }}
+              />
+              <Tab.Screen
+                name="Chat"
+                component={Chat}
+                options={{
+                  tabBarIcon: ({ focused }) => (
+                    <Entypo
+                      name="chat"
                       size={24}
                       color={focused ? "#000000" : "#B0D9B1"}
                     />

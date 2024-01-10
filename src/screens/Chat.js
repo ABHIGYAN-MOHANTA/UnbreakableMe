@@ -11,18 +11,22 @@ import {
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { styles } from "../styles/styles.js";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 const Chat = () => {
   const [message, setMessage] = useState("");
   const [messagesList, setMessagesList] = useState([]);
 
   const sendMessage = async () => {
     if (message.trim() !== "") {
+      const userMessage = { text: message, type: "user" };
       setMessagesList([...messagesList, { text: message, type: "user" }]);
       const question = message;
       const encodedMessage = encodeURIComponent(message);
+      setMessage("");
       try {
         const response = await fetch(
-          "https://generativelanguage.googleapis.com/v1beta3/models/text-bison-001:generateText?key=API_KEY",
+          "https://generativelanguage.googleapis.com/v1beta3/models/text-bison-001:generateText?key=APi_KEY",
           {
             method: "POST",
             headers: {
@@ -35,6 +39,7 @@ const Chat = () => {
             }),
           }
         );
+
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -44,7 +49,7 @@ const Chat = () => {
           data.candidates.length > 0 &&
           data.candidates[0].output
         ) {
-          const outputText = data.candidates[0].output.trim();
+          const outputText = data.candidates[0].output;
 
           setMessagesList([
             ...messagesList,
@@ -52,12 +57,53 @@ const Chat = () => {
             { text: `${outputText}`, type: "bot" },
           ]);
         }
+
+        if (
+          data.candidates &&
+          data.candidates.length > 0 &&
+          data.candidates[0].output
+        ) {
+          const outputText = data.candidates[0].output;
+
+          const botMessages = [
+            { text: `${question}`, type: "user" },
+            { text: `${outputText}`, type: "bot" },
+          ];
+
+          setMessagesList([...messagesList, ...botMessages]);
+
+          // Save the entire conversation in AsyncStorage
+          const savedMessages = [...messagesList, userMessage, ...botMessages];
+          await AsyncStorage.setItem(
+            "savedConversation",
+            JSON.stringify(savedMessages)
+          );
+        }
       } catch (error) {
         console.error("There was a problem with the fetch operation:", error);
       }
-      setMessage("");
     }
   };
+
+  useEffect(() => {
+    const retrieveSavedConversation = async () => {
+      try {
+        const savedConversation = await AsyncStorage.getItem(
+          "savedConversation"
+        );
+        if (savedConversation !== null) {
+          setMessagesList(JSON.parse(savedConversation));
+        }
+      } catch (error) {
+        console.error(
+          "Error retrieving conversation from AsyncStorage:",
+          error
+        );
+      }
+    };
+
+    retrieveSavedConversation();
+  }, []);
 
   return (
     <View style={{ flex: 1, backgroundColor: "#000000" }}>
@@ -170,7 +216,7 @@ const stylesTwo = StyleSheet.create({
   },
 
   botMessageContainer: {
-    backgroundColor: "#009688",
+    backgroundColor: "#202c33",
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 8,

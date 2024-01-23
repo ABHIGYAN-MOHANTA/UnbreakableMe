@@ -73,7 +73,7 @@ const Chat = () => {
           setMessagesList([...messagesList, ...botMessages]);
 
           // Save the entire conversation in AsyncStorage
-          const savedMessages = [...messagesList, userMessage, ...botMessages];
+          const savedMessages = [...messagesList, ...botMessages];
           await AsyncStorage.setItem(
             "savedConversation",
             JSON.stringify(savedMessages)
